@@ -1,0 +1,10 @@
+# ignore all log files
+*.log
+
+# folders
+firefox/
+obsidian/
+Signal/
+syncthing/
+syncthing-gtk/
+torbrowser/
