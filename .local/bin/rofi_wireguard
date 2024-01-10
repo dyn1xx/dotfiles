@@ -1,0 +1,101 @@
+#!/bin/bash
+
+# Create dictionary object
+declare -A servers
+
+#
+# Put your list of servers here
+# Format: servers[interface-name]="Friendly Name"
+# Example: servers[mullvad-us-atl-wg-002]="Mullvad Atlanta 002"
+# 
+servers[one]="Home"
+servers[two]="Vuorikuja"
+servers[mullvad-fi-hel-wg-001]="Mullvad Helsinki 1"
+servers[mullvad-fi-hel-wg-002]="Mullvad Helsinki 2"
+servers[mullvad-us-dal-wg-001]="Mullvad Dallas"
+
+#
+# Path to rofi theme file
+# 
+rofi_theme="/home/v/.local/share/rofi/themes/squared-everforest.rasi"
+
+
+# 
+# Polybar icon string - the icon that is displayed in Polybar when this is used
+#
+polybar_icon_string="%{F#b3cfa7}%{F-}"
+
+# Function to disconnect from all servers
+disconnect() {
+    for disconnect_server in "${!servers[@]}"; do
+        wg-quick down "$disconnect_server"
+    done
+}
+
+case $1 in
+    menu)
+
+    declare -a menu
+    title="WireGuard Tunnel"
+    disconnect=""
+
+    # Iterate over all servers
+    for server in "${!servers[@]}"; do
+        # Check IP addresses on interface
+        ip address show dev "$server" &> /dev/null
+
+        # If the command fails, add the server as an option
+        if [ $? -ne 0 ]; then
+            menu+=("${servers[$server]}")
+        # If the command is successful, add the option to disconnect from the server
+        else
+            title="Connected to ${servers[$server]}"
+            disconnect="Disconnect\n"
+        fi
+    done
+
+    # Display rofi menu and retrieve selection
+    selection=$(echo -ne "$(printf '%s\n' "$disconnect${menu[@]}")\n" | rofi -dmenu -i -p "$title" -theme "$rofi_theme")
+
+    if [ "$selection" == "Disconnect" ]
+    then
+        disconnect
+    else
+        # Figure out which server was chosen, if any
+        for server in "${!servers[@]}"; do
+            echo "checking $server"
+            if [[ "${servers[$server]}" == "$selection" ]]; then
+                # If there is a match, disconnect from all servers and connect to the specified server
+                echo "selection $selection matched with ${servers[$server]} ($server)"
+                disconnect
+                wg-quick up $server
+            fi
+        done
+    fi
+
+    # If connecting to a new VPN, send a desktop notification
+    if [ "$selection" != "Disconnect" ] && [ "$selection" != "" ]
+    then
+        notify-send "WireGuard Tunnel" "Connected to $selection"
+    fi
+    ;;
+
+    polybar_icon)
+        found_server="no"
+
+        # Iterate over each server and check if we are connected
+        for server in "${!servers[@]}"; do
+            ip address show dev "$server" &> /dev/null
+            if [ $? -eq 0 ]; then
+                found_server="yes"
+            fi
+        done
+
+        # Echo an empty string if not connected; otherwise echo the key icon for Polybar
+        if [ $found_server == "no" ]; then
+            echo ""
+        else
+            echo $polybar_icon_string
+        fi
+    ;;
+esac
