@@ -32,10 +32,6 @@ setopt hist_verify
 setopt inc_append_history
 setopt share_history
 
-# Keybinds
-bindkey '^a' beginning-of-line
-bindkey '^e' end-of-line
-
 # Plugins
 plug "zsh-users/zsh-autosuggestions"
 plug "zap-zsh/supercharge"
