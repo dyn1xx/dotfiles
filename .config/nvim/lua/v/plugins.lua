@@ -104,10 +104,10 @@ return require('packer').startup(function(use)
         config = function() require('v.plugins.lualine') end
     }
 
-    -- orgmode
+    -- indentation guides
     use {
-        'nvim-orgmode/orgmode',
-        config = function() require('v.plugins.orgmode') end
+        'lukas-reineke/indent-blankline.nvim',
+        config = function () require('v.plugins.indent-blankline') end
     }
 
 -- automatically set up the configuration after cloning packer.nvim

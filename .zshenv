@@ -19,7 +19,21 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_CACHE_HOME="$HOME/.cache"
 
-export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
+export GOPATH="$XDG_DATA_HOME"/go
+export GNUPGHOME="$XDG_DATA_HOME"/gnupg
+export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
+export NPM_CONFIG_PREFIX="$XDG_DATA_HOME"/npm
+export TERMINFO="$XDG_DATA_HOME"/terminfo
+
+export ANSIBLE_HOME="${XDG_CONFIG_HOME}/ansible"
+export BYOBU_CONFIG_DIR="$XDG_CONFIG_HOME/byobu"
+export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0"
+export WGETRC="$XDG_CONFIG_HOME/wgetrc"
+
+export PYTHON_HISTORY="$XDG_STATE_HOME/python/history"
+
+zstyle ':completion:*' cache-path $XDG_CACHE_HOME/zsh/zcompcache
+compinit -d $XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION
 
 # Locale
 export LC_ALL=en_US.UTF-8

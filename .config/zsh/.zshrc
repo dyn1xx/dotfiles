@@ -46,9 +46,8 @@ plug "$XDG_CONFIG_HOME/zsh/colored-man-pages.plugin.zsh"
 autoload -Uz compinit
 compinit
 
-# Style
+# Starship config
 export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship.toml"
-zstyle ':completion:*' menu select
 
 # Start tmux if not already in tmux
 [ -n "$TMUX" ] || tmux
