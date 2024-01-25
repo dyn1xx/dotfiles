@@ -21,8 +21,6 @@ export XDG_CACHE_HOME="$HOME/.cache"
 
 export GOPATH="$XDG_DATA_HOME"/go
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
-export _JAVA_OPTIONS=-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java
-export NPM_CONFIG_PREFIX="$XDG_DATA_HOME"/npm
 export TERMINFO="$XDG_DATA_HOME"/terminfo
 
 export ANSIBLE_HOME="${XDG_CONFIG_HOME}/ansible"
