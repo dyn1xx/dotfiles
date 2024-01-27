@@ -66,6 +66,7 @@ map C clear
 
 # movement
 map gd cd ~/downloads
+map gs cd ~/school
+map gp cd ~/personal
+map gn cd ~/notes
 map gc cd ~/.config
-map gs cd ~/.local/bin
-map gt cd ~/.local/share/Trash/files
