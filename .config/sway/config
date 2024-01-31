@@ -33,6 +33,9 @@ bindsym $mod+d exec rofi -show drun -show-icons
 # Screenshot
 bindsym $mod+p exec grimshot save active
 
+# Screenshot (select area)
+bindsym $mod+Shift+p exec grimshot save area
+
 # Lock the screen
 bindsym $mod+Escape exec 'swaylock -f -c 000000'
 
