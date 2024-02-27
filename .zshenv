@@ -10,6 +10,7 @@ export BROWSER="firefox"
 
 # Adds ~/.local/bin and subfolders to $PATH
 export PATH="$PATH:/home/v/.local/share/go/bin:${$(find ~/.local/bin -maxdepth 1 -type d -printf %p:)%%:}"
+export PATH="$PATH:/home/v/.cargo/bin"
 
 # Cleaning up home dir
 export ZDOTDIR="$HOME/.config/zsh"
