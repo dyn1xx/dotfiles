@@ -90,9 +90,11 @@ default_border pixel 0
 font hack 14
 title_align center
 
-client.focused          #000000 #000000 #5de4c7
-client.focused_inactive #000000 #000000 #a6accd
-client.unfocused        #000000 #000000 #a6accd
+set $bg #000000ea
+
+client.focused          $bg $bg #5de4c7
+client.focused_inactive $bg $bg #a6accd
+client.unfocused        $bg $bg #a6accd
 
 # --- Hardware ---
 
