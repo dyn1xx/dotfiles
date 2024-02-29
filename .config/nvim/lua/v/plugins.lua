@@ -59,9 +59,9 @@ return require('packer').startup(function(use)
 
     -- colorscheme
     use({
-        'rose-pine/neovim',
-        as = 'rose-pine',
-        config = function() require('v.plugins.rose-pine') end
+        'olivercederborg/poimandres.nvim',
+        as = 'poimandres',
+        config = function() require('v.plugins.colorscheme') end
     })
 
     -- writing mode
@@ -108,6 +108,12 @@ return require('packer').startup(function(use)
     use {
         'lukas-reineke/indent-blankline.nvim',
         config = function () require('v.plugins.indent-blankline') end
+    }
+
+    -- hex-code highlight
+    use {
+        'norcalli/nvim-colorizer.lua',
+        config = function () require('v.plugins.colorizer') end
     }
 
 -- automatically set up the configuration after cloning packer.nvim

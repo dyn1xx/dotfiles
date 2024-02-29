@@ -1,16 +1,16 @@
 [colors.bright]
-black = "0x6e6a86"
-blue = "0x9ccfd8"
-cyan = "0xebbcba"
-green = "0x31748f"
-magenta = "0xc4a7e7"
-red = "0xeb6f92"
-white = "0xe0def4"
-yellow = "0xf6c177"
+black = "#a6accd"
+red = "#d0679d"
+green = "#5de4c7"
+yellow = "#fffac2"
+blue = "#add7ff"
+magenta = "#fae4fc"
+cyan = "#89ddff"
+white = "#ffffff"
 
 [colors.cursor]
-cursor = "0x524f67"
-text = "0xe0def4"
+cursor = "#ffffff"
+text = "CellBackground"
 
 [colors.hints.end]
 background = "#1f1d2e"
@@ -25,29 +25,29 @@ background = "None"
 foreground = "None"
 
 [colors.normal]
-black = "0x26233a"
-blue = "0x9ccfd8"
-cyan = "0xebbcba"
-green = "0x31748f"
-magenta = "0xc4a7e7"
-red = "0xeb6f92"
-white = "0xe0def4"
-yellow = "0xf6c177"
+black = "#1b1e28"
+red = "#d0679d"
+green = "#5de4c7"
+yellow = "#fffac2"
+blue = "#89ddff"
+magenta = "#fcc5e9"
+cyan = "#add7ff"
+white = "#ffffff"
 
 [colors.primary]
-background = "0x000000"
-foreground = "0xe0def4"
+background = "#000000"
+foreground = "#ffffff"
 
 [colors.selection]
-background = "0x403d52"
-text = "0xe0def4"
+background = "#ffffff"
+text = "CellBackground"
 
 [colors.vi_mode_cursor]
-cursor = "0x524f67"
-text = "0xe0def4"
+cursor = "#ffffff"
+text = "CellBackground"
 
 [font]
-size = 16.0
+size = 13.0
 
 [font.bold]
 family = "hack"
@@ -67,3 +67,6 @@ family = "hack"
 [window.padding]
 x = 20
 y = 20
+
+[window]
+opacity = 0.95

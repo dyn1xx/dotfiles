@@ -34,9 +34,3 @@ vim.opt.updatetime = 50
 
 -- cursorline
 vim.opt.cursorline = true
-
--- neovide padding
-vim.g.neovide_padding_top = 40
-vim.g.neovide_padding_bottom = 40
-vim.g.neovide_padding_right = 40
-vim.g.neovide_padding_left = 40

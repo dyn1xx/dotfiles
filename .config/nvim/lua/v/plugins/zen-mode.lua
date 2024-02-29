@@ -1,3 +1,5 @@
+vim.keymap.set("n", "<leader>z", vim.cmd.ZenMode)
+
 require("zen-mode").setup({
     window = {
         width = 80,
@@ -20,5 +22,4 @@ require("zen-mode").setup({
         vim.opt.wrap = false
         vim.opt.spell = false
     end,
-
 })
