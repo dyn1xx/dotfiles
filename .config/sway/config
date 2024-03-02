@@ -11,7 +11,7 @@ bindsym $mod+f exec alacritty, workspace number 2
 assign [title="Firefox"] 3
 bindsym $mod+s exec firefox, workspace number 3
 
-# Fullscreen:
+# Fullscreen toggle
 bindsym $mod+a fullscreen
 
 # Start password manager
@@ -87,18 +87,19 @@ bindsym $mod+Ctrl+l resize grow width 40px
 # Window style
 smart_borders off
 default_border pixel 0
-font hack 14
+font hack 13
 title_align center
 
 set $bg #000000ea
 
-client.focused          $bg $bg #5de4c7
+client.focused          $bg $bg #ffffff
 client.focused_inactive $bg $bg #a6accd
 client.unfocused        $bg $bg #a6accd
 
 # --- Hardware ---
 
-set $wallpaper ~/media/pictures/wallpapers/anime1.jpeg
+set $wallpaper ~/media/pictures/wallpapers/dark5.jpg
+#set $wallpaper ~/media/pictures/memes/windows10.jpg
 
 # Output configuration
 # Primary

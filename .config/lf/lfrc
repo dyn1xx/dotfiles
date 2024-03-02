@@ -70,3 +70,4 @@ map gs cd ~/school
 map gp cd ~/personal
 map gn cd ~/notes
 map gc cd ~/.config
+map gm cd ~/media

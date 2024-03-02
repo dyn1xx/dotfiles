@@ -2,7 +2,7 @@
 set font "monospace normal 18"
 
 # Rose-Pine color-scheme
-set default-bg                  "#191724"
+set default-bg                  "#000000"
 set default-fg                  "#e0def4"
 
 set statusbar-fg                "#e0def4"
