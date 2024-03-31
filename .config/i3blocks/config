@@ -1,0 +1,29 @@
+[volume-pulseaudio]
+command=~/.config/i3blocks/volume-pulseaudio
+interval=once
+signal=1
+
+[battery]
+command=~/.config/i3blocks/battery
+LABEL=⚡ 
+interval=30
+
+[time]
+command=date '+%a'
+label=󰃭 
+interval=60
+
+[time]
+command=date '+%V'
+label=󰨳 
+interval=60
+
+[time]
+command=date '+%d-%m-%y'
+label=󰃮 
+interval=60
+
+[time]
+command=date '+%H:%M '
+label=󱑒 
+interval=5

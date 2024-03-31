@@ -1,0 +1,72 @@
+[colors.bright]
+black = "#a6accd"
+red = "#d0679d"
+green = "#5de4c7"
+yellow = "#fffac2"
+blue = "#add7ff"
+magenta = "#fae4fc"
+cyan = "#89ddff"
+white = "#ffffff"
+
+[colors.cursor]
+cursor = "#ffffff"
+text = "CellBackground"
+
+[colors.hints.end]
+background = "#1f1d2e"
+foreground = "#6e6a86"
+
+[colors.hints.start]
+background = "#1f1d2e"
+foreground = "#908caa"
+
+[colors.line_indicator]
+background = "None"
+foreground = "None"
+
+[colors.normal]
+black = "#1b1e28"
+red = "#d0679d"
+green = "#5de4c7"
+yellow = "#fffac2"
+blue = "#89ddff"
+magenta = "#fcc5e9"
+cyan = "#add7ff"
+white = "#ffffff"
+
+[colors.primary]
+background = "#000000"
+foreground = "#ffffff"
+
+[colors.selection]
+background = "#ffffff"
+text = "CellBackground"
+
+[colors.vi_mode_cursor]
+cursor = "#ffffff"
+text = "CellBackground"
+
+[font]
+size = 13.0
+
+[font.bold]
+family = "hack"
+style = "Bold"
+
+[font.bold_italic]
+family = "hack"
+style = "Bold Italic"
+
+[font.italic]
+family = "hack"
+style = "Italic"
+
+[font.normal]
+family = "hack"
+
+[window.padding]
+x = 20
+y = 20
+
+[window]
+opacity = 0.92

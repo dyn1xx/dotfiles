@@ -1,0 +1,162 @@
+# --- Key bindings ---
+
+# Set modifier
+set $mod Mod4
+
+# Set workspaces
+set $ws1 "1:󰗃"
+set $ws2 "2:"
+set $ws3 "3:󰈹"
+set $ws4 "4:󰔌"
+
+# Start a terminal
+assign [title="Alacritty"] $ws2
+bindsym $mod+f exec alacritty, workspace $ws2
+
+# Start web browser
+assign [title="Firefox"] $ws3
+bindsym $mod+s exec firefox, workspace $ws3
+
+# Fullscreen toggle
+bindsym $mod+a fullscreen
+
+# Start password manager
+bindsym $mod+e exec keepmenu -C
+
+# Start calculator
+bindsym $mod+c exec rofi -show calc -modi calc -no-show-match -no-sort
+
+# Kill focused window
+bindsym $mod+Shift+q kill
+
+# Start launcher
+bindsym $mod+d exec rofi -show drun -show-icons
+
+# Screenshot
+bindsym $mod+p exec grimshot save active
+
+# Screenshot (select area)
+bindsym $mod+Shift+p exec grimshot save area
+
+# Lock the screen
+bindsym $mod+Escape exec 'swaylock -f -c 000000'
+
+# Reload the configuration file
+bindsym $mod+Shift+c reload
+
+# Exit sway
+bindsym $mod+Shift+Ctrl+q exec swaynag -t warning -m 'Exit Sway?' -B 'Confirm' 'swaymsg exit'
+
+# Volume
+bindsym XF86AudioRaiseVolume exec amixer set Master 5%+ && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioLowerVolume exec amixer set Master 5%- && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioMute exec amixer -q -D pulse sset Master toggle && pkill -RTMIN+1 i3blocks
+
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
+# Brightness
+bindsym XF86MonBrightnessUp exec brightnessctl s 50+
+bindsym XF86MonBrightnessDown exec brightnessctl s 50-
+
+# Moving around
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# Workspaces
+bindsym $mod+1 workspace $ws1, layout default
+bindsym $mod+2 workspace $ws2, layout default
+bindsym $mod+3 workspace $ws3, layout default
+bindsym $mod+4 workspace $ws4, layout tabbed
+
+bindsym $mod+Shift+1 move container to workspace $ws1, workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2, workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3, workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4, workspace $ws4
+
+# Resizing windows
+bindsym $mod+Ctrl+h resize shrink width 40px
+bindsym $mod+Ctrl+j resize grow height 40px
+bindsym $mod+Ctrl+k resize shrink height 40px
+bindsym $mod+Ctrl+l resize grow width 40px
+
+# --- Visual ---
+
+# Window style
+smart_borders off
+default_border pixel 0
+font hack 13
+title_align center
+
+set $bg #000000ea
+
+client.focused          $bg $bg #5de4c7
+client.focused_inactive $bg $bg #a6accd
+client.unfocused        $bg $bg #a6accd
+
+# --- Hardware ---
+
+set $wallpaper ~/media/pictures/wallpapers/anime3.jpg
+#set $wallpaper ~/media/pictures/memes/bliss.jpg
+
+# Output configuration
+# Primary
+output eDP-1 res 3840x2400 scale 2 bg $wallpaper fill
+workspace $ws1 output eDP-1
+# Secondary
+output DP-1 res 3840x2160 scale 2 bg $wallpaper fill
+workspace $ws2 output DP-1
+workspace $ws3 output DP-1
+workspace $ws4 output DP-1
+
+# Idle configuration
+exec swayidle -w \
+    timeout 3000 'swaylock -f -c 000000' \
+    timeout 3500 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
+    before-sleep 'swaylock -f -c 000000'
+
+# Input configuration
+input "2:14:SynPS/2_Synaptics_TouchPad" {
+    dwt enabled
+    tap enabled
+    natural_scroll enabled
+    middle_emulation enabled
+}
+
+input "type:keyboard" {
+    xkb_layout fi
+    xkb_variant ,nodeadkeys
+    xkb_options grp:alt_shift_toggle
+}
+
+# Bar
+bar {
+    status_command i3blocks
+    position top
+    font pango:Hack Bold 13
+    separator_symbol "|"
+    tray_output none
+    strip_workspace_numbers yes
+
+    colors {
+        background $bg
+        statusline #a6accd
+        separator #5de4c7
+
+        focused_workspace  $bg $bg #5de4c7
+        active_workspace   $bg $bg #ffffff
+        inactive_workspace $bg $bg #908caa
+        urgent_workspace   $bg $bg #d0679d
+    }
+}
+
+include /etc/sway/config.d/*

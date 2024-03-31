@@ -1,0 +1,9 @@
+[Default Applications]
+x-scheme-handler/prusaslicer=PrusaSlicerURLProtocol.desktop
+image/png=swayimg.desktop
+image/jpg=swayimg.desktop
+image/jpeg=swayimg.desktop
+text/plain=nvim.desktop
+
+[Added Associations]
+application/x-php=libreoffice-writer.desktop;
