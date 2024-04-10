@@ -12,7 +12,8 @@ set $ws4 "4:󰔌"
 # Assignments
 assign [title="Alacritty"] $ws2
 assign [title="Firefox"] $ws3
-assign [title=^(?!Alacritty$|Firefox$).*$] $ws4
+assign [title="Chromium"] $ws3
+assign [title=^(?!Alacritty$|Firefox$|Chromium$).*$] $ws4
 
 # Start a terminal
 bindsym $mod+f exec alacritty, workspace $ws2
@@ -108,15 +109,14 @@ client.unfocused        $bg $bg #a6accd
 
 # --- Hardware ---
 
-set $wallpaper ~/media/pictures/wallpapers/anime5.jpg
-#set $wallpaper ~/media/pictures/memes/bliss.jpg
+include ~/.config/sway/wallpaper
 
 # Output configuration
 # Primary
-output eDP-1 res 3840x2400 scale 2 bg $wallpaper fill
+output eDP-1 res 3840x2400 scale 2 bg $wallpaper
 workspace $ws1 output eDP-1
 # Secondary
-output DP-1 res 3840x2160 scale 2 bg $wallpaper fill
+output DP-1 res 3840x2160 scale 2 bg $wallpaper
 workspace $ws2 output DP-1
 workspace $ws3 output DP-1
 workspace $ws4 output DP-1
