@@ -9,12 +9,15 @@ set $ws2 "2:"
 set $ws3 "3:󰈹"
 set $ws4 "4:󰔌"
 
-# Start a terminal
+# Assignments
 assign [title="Alacritty"] $ws2
+assign [title="Firefox"] $ws3
+assign [title=^(?!Alacritty$|Firefox$).*$] $ws4
+
+# Start a terminal
 bindsym $mod+f exec alacritty, workspace $ws2
 
 # Start web browser
-assign [title="Firefox"] $ws3
 bindsym $mod+s exec firefox, workspace $ws3
 
 # Fullscreen toggle
