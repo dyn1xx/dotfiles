@@ -1,0 +1,16 @@
+width = 100%
+height = 100%
+border-width = 0
+outline-width = 0
+padding-left = 35%
+padding-top = 35%
+result-spacing = 25
+num-results = 5
+font = hack
+background-color = #000A
+prompt-text = "> "
+prompt-color = "#5de4c7"
+text-cursor-style = block
+text-cursor = true
+text-cursor-color = "#a6accd"
+selection-color = "#d0679d"
