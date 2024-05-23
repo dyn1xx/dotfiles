@@ -122,6 +122,12 @@ return require('packer').startup(function(use)
         config = function () require('v.plugins.comment') end
     }
 
+    -- url-open
+    use {
+        'sontungexpt/url-open',
+        config = function () require('v.plugins.url-open') end
+    }
+
 -- automatically set up the configuration after cloning packer.nvim
 
     if packer_bootstrap then
