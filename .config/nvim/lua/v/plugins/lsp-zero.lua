@@ -13,7 +13,6 @@ require('mason-lspconfig').setup({
     ensure_installed = {
         'jdtls',
         'marksman',
-        'lua-language-server'
     },
     handlers = {
         function(server_name)
