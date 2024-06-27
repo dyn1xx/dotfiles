@@ -36,10 +36,10 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec tofi-drun | xargs swaymsg exec --
 
 # Screenshot
-bindsym $mod+p exec grimshot save active
+bindsym $mod+p exec grimshot savecopy active
 
 # Screenshot (select area)
-bindsym $mod+Shift+p exec grimshot save area
+bindsym $mod+Shift+p exec grimshot savecopy area
 
 # Lock the screen
 bindsym $mod+Escape exec 'swaylock -f -c 000000'
@@ -105,6 +105,15 @@ set $bg #000000ea
 client.focused          $bg $bg #5de4c7
 client.focused_inactive $bg $bg #a6accd
 client.unfocused        $bg $bg #a6accd
+
+# GTK-theme
+set $gnome-schema org.gnome.desktop.interface
+
+exec_always {
+    gsettings set $gnome-schema gtk-theme 'Breeze-Dark'
+    gsettings set $gnome-schema icon-theme 'breeze-dark'
+    gsettings set $gnome-schema font-name 'hack'
+}
 
 # --- Hardware ---
 
