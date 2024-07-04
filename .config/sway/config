@@ -36,10 +36,12 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec tofi-drun | xargs swaymsg exec --
 
 # Screenshot
-bindsym $mod+p exec grimshot savecopy active
+# bindsym $mod+p exec grimshot savecopy active
+bindsym $mod+p exec grimshot save active
 
 # Screenshot (select area)
-bindsym $mod+Shift+p exec grimshot savecopy area
+# bindsym $mod+Shift+p exec grimshot savecopy area
+bindsym $mod+Shift+p exec grimshot save area
 
 # Lock the screen
 bindsym $mod+Escape exec 'swaylock -f -c 000000'
@@ -117,17 +119,7 @@ exec_always {
 
 # --- Hardware ---
 
-include ~/.config/sway/wallpaper
-
-# Output configuration
-# Primary
-output HDMI-A-1 res 3840x2160 scale 2 pos 0 0 bg $wallpaper
-workspace $ws1 output DP-1
-# Secondary
-output DP-1 res 1920x1080@240Hz scale 1 pos 1920 0 bg $wallpaper
-workspace $ws2 output HDMI-A-1
-workspace $ws3 output HDMI-A-1
-workspace $ws4 output HDMI-A-1
+include ~/.config/sway/displays
 
 # Idle configuration
 exec swayidle -w \
