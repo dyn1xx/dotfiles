@@ -26,9 +26,6 @@ bindsym $mod+a fullscreen
 # Start password manager
 bindsym $mod+e exec keepmenu -C
 
-# Start calculator
-bindsym $mod+c exec rofi -show calc -modi calc -no-show-match -no-sort
-
 # Kill focused window
 bindsym $mod+Shift+q kill
 
@@ -83,10 +80,10 @@ bindsym $mod+2 workspace $ws2, layout default
 bindsym $mod+3 workspace $ws3, layout default
 bindsym $mod+4 workspace $ws4, layout tabbed
 
-bindsym $mod+Shift+1 move container to workspace $ws1, workspace $ws1
-bindsym $mod+Shift+2 move container to workspace $ws2, workspace $ws2
-bindsym $mod+Shift+3 move container to workspace $ws3, workspace $ws3
-bindsym $mod+Shift+4 move container to workspace $ws4, workspace $ws4
+bindsym $mod+Shift+1 move container to workspace $ws1, workspace $ws1, layout default
+bindsym $mod+Shift+2 move container to workspace $ws2, workspace $ws2, layout default
+bindsym $mod+Shift+3 move container to workspace $ws3, workspace $ws3, layout default
+bindsym $mod+Shift+4 move container to workspace $ws4, workspace $ws4, layout tabbed
 
 # Resizing windows
 bindsym $mod+Ctrl+h resize shrink width 40px
