@@ -34,11 +34,11 @@ bindsym $mod+d exec tofi-drun | xargs swaymsg exec --
 
 # Screenshot
 # bindsym $mod+p exec grimshot savecopy active
-bindsym $mod+p exec grimshot save active
+bindsym $mod+p exec grimshot savecopy active
 
 # Screenshot (select area)
 # bindsym $mod+Shift+p exec grimshot savecopy area
-bindsym $mod+Shift+p exec grimshot save area
+bindsym $mod+Shift+p exec grimshot savecopy area
 
 # Lock the screen
 bindsym $mod+Escape exec 'swaylock -f -c 000000'
@@ -149,6 +149,7 @@ bar {
     separator_symbol "|"
     tray_output none
     strip_workspace_numbers yes
+
 
     colors {
         background $bg
