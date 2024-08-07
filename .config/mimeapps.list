@@ -1,8 +1,8 @@
 [Default Applications]
 x-scheme-handler/prusaslicer=PrusaSlicerURLProtocol.desktop
-image/png=swayimg.desktop
-image/jpg=swayimg.desktop
-image/jpeg=swayimg.desktop
+image/png=imv.desktop
+image/jpg=imv.desktop
+image/jpeg=imv.desktop
 text/plain=nvim.desktop
 
 [Added Associations]
