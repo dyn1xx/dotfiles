@@ -95,16 +95,16 @@ bindsym $mod+Ctrl+l resize grow width 40px
 # --- Visual ---
 
 # Window style
-smart_borders off
-default_border pixel 0
+smart_borders on
+default_border pixel 2
 font hack 13
 title_align center
 
 set $bg #000000ea
 
-client.focused          $bg $bg #5de4c7
-client.focused_inactive $bg $bg #a6accd
-client.unfocused        $bg $bg #a6accd
+client.focused              $bg #5de4c7 $bg
+client.focused_inactive     $bg $bg #a6accd
+client.unfocused            $bg $bg #a6accd
 
 # GTK-theme
 set $gnome-schema org.gnome.desktop.interface
