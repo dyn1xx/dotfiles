@@ -4,6 +4,9 @@ set ignorecase true
 set icons true
 set sixel true
 
+# previewer
+set previewer ~/.config/lf/preview
+
 # custom functions
 cmd mkdir ${{
   printf "Directory Name: "
