@@ -2,6 +2,7 @@
 set hidden true
 set ignorecase true
 set icons true
+set sixel true
 
 # custom functions
 cmd mkdir ${{
