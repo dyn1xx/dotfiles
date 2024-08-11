@@ -11,13 +11,13 @@ set $ws4 "4:󰔌"
 set $ws5 "5:󰍹"
 
 # Assignments
-assign [title="Alacritty"] $ws2
+assign [title="foot"] $ws2
 assign [title="imv"] $ws2
 assign [title="Firefox"] $ws3
-assign [title=^(?!Alacritty$|Firefox$|imv$).*$] $ws4
+assign [title=^(?!foot$|Firefox$|imv$).*$] $ws4
 
 # Start a terminal
-bindsym $mod+f exec alacritty, workspace $ws2
+bindsym $mod+f exec foot, workspace $ws2
 
 # Start web browser
 bindsym $mod+s exec firefox, workspace $ws3
