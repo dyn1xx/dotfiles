@@ -45,6 +45,9 @@ bindsym $mod+Shift+p exec grimshot savecopy area
 # Lock the screen
 bindsym $mod+Escape exec 'swaylock -f -c 000000'
 
+# Toggle bar
+bindsym $mod+b bar mode toggle
+
 # Reload the configuration file
 bindsym $mod+Shift+c reload
 
@@ -154,7 +157,6 @@ bar {
     separator_symbol "|"
     tray_output none
     strip_workspace_numbers yes
-
 
     colors {
         background $bg
