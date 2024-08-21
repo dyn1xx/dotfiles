@@ -2,7 +2,7 @@
 command=~/.config/i3blocks/nm-vpn
 init_color=#d0679d
 on_color=#a6accd
-label=󱂇  
+label=󱂇 
 interval=30
 
 [volume-pulseaudio]
