@@ -17,5 +17,5 @@ vim.keymap.set("n", "gx", "<esc>:URLOpenUnderCursor<cr>")
 
 -- refresh treesitter highlighting
 vim.keymap.set({ "n", "v" }, "<leader>H", function()
-    vim.cmd("TSEnable highlight")
+    vim.cmd("TSToggle highlight")
 end, { noremap = true, silent = true })
