@@ -14,3 +14,8 @@ vim.keymap.set("n", "<leader>P", [["+P]])
 
 -- open url under cursor
 vim.keymap.set("n", "gx", "<esc>:URLOpenUnderCursor<cr>")
+
+-- refresh treesitter highlighting
+vim.keymap.set({ "n", "v" }, "<leader>H", function()
+    vim.cmd("TSEnable highlight")
+end, { noremap = true, silent = true })
