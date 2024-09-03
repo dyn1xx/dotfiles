@@ -21,7 +21,7 @@ label.module {
 
 #workspaces {
     padding: 0 10px;
-    padding-right: 12px; /* fix icons not being centered on origin */
+    padding-right: 16px; /* fix icons not being centered on origin */
     border-radius: 20;
     background: #1f1d2e;
     margin: 5px;
