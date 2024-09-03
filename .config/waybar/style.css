@@ -44,3 +44,11 @@ label.module {
 #battery.charging {
     color: #26A65B;
 }
+
+#battery.warning {
+    color: #5de4c7;
+}
+
+#battery.critical {
+    color: #d0679d;
+}
