@@ -1,0 +1,69 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: hack;
+    font-size: 16px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: black;
+    opacity: 0.92;
+    color: white;
+}
+
+label.module {
+    padding: 0 10px;
+    border-radius: 20;
+    background: #1f1d2e;
+    margin: 5px;
+}
+
+#workspaces {
+    padding: 0 10px;
+    padding-right: 12px; /* fix icons not being centered on origin */
+    border-radius: 20;
+    background: #1f1d2e;
+    margin: 5px;
+}
+
+#workspaces button {
+    padding: 0 10px;
+    border-radius: 20px;
+    color: white;
+}
+
+#workspaces button.focused {
+    color: #5de4c7;
+}
+
+#workspaces button.urgent {
+    color: #d0679d;
+}
+
+#battery {
+    background-color: #ffffff;
+    color: black;
+}
+
+#battery.charging {
+    color: white;
+    background-color: #26A65B;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: black;
+    }
+}
+
+#battery.warning:not(.charging) {
+    background: #f53c3c;
+    color: white;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}

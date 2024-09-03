@@ -44,9 +44,6 @@ bindsym $mod+Shift+p exec grimshot savecopy area
 # Lock the screen
 bindsym $mod+Escape exec 'swaylock -f -c 000000'
 
-# Toggle bar
-bindsym $mod+b bar mode toggle
-
 # Reload the configuration file
 bindsym $mod+Shift+c reload
 
@@ -149,24 +146,29 @@ input "type:keyboard" {
 xwayland enable
 
 # Bar
+
 bar {
-    status_command i3blocks
-    position top
-    font pango:Hack Bold 13
-    separator_symbol "|"
-    tray_output none
-    strip_workspace_numbers yes
-
-    colors {
-        background $bg
-        statusline #a6accd
-        separator #5de4c7
-
-        focused_workspace  $bg $bg #5de4c7
-        active_workspace   $bg $bg #ffffff
-        inactive_workspace $bg $bg #908caa
-        urgent_workspace   $bg $bg #d0679d
-    }
+    swaybar_command waybar
 }
+
+# bar {
+#     status_command i3blocks
+#     position top
+#     font pango:Hack Bold 13
+#     separator_symbol "|"
+#     tray_output none
+#     strip_workspace_numbers yes
+#
+#     colors {
+#         background $bg
+#         statusline #a6accd
+#         separator #5de4c7
+#
+#         focused_workspace  $bg $bg #5de4c7
+#         active_workspace   $bg $bg #ffffff
+#         inactive_workspace $bg $bg #908caa
+#         urgent_workspace   $bg $bg #d0679d
+#     }
+# }
 
 include /etc/sway/config.d/*

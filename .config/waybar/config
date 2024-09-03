@@ -1,0 +1,41 @@
+{
+    "layer": "top",
+    "modules-left": ["pulseaudio", "battery"],
+    "modules-center": ["sway/workspaces"],
+    "modules-right": ["clock#day", "clock#week", "clock#date", "clock"],
+    "height": 35,
+
+    "battery": {
+        "format": "{icon} {capacity}%",
+        "format-icons": ["", "", "", "", ""]
+    },
+
+    "clock#day": {
+        "format": "󰃭 {:%a}"
+    },
+
+    "clock#week": {
+        "format": "󰨳 {:%V}"
+    },
+
+    "clock#date": {
+        "format": "󰃮 {:%d-%m-%y}"
+    },
+
+    "clock": {
+        "format": "󱑒 {:%H:%M}"
+    },
+
+    "sway/workspaces": {
+        "all-outputs": true,
+        "format": "{name}",
+    },
+
+    "pulseaudio": {
+        "scroll-step": 5,
+        "format": " {volume}%",
+        "format-bluetooth": "  {volume}%",
+        "format-muted": " {volume}%",
+        "on-click": "amixer -q set Master toggle",
+    },
+}
