@@ -128,6 +128,9 @@ return require('packer').startup(function(use)
         config = function () require('v.plugins.url-open') end
     }
 
+    -- debugger
+
+
 -- automatically set up the configuration after cloning packer.nvim
 
     if packer_bootstrap then
