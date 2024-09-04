@@ -7,8 +7,7 @@
 }
 
 window#waybar {
-    background: black;
-    opacity: 0.92;
+    background: rgba(0, 0, 0, 0.92);
     color: white;
 }
 
@@ -21,7 +20,7 @@ label.module {
 
 #workspaces {
     padding: 0 10px;
-    padding-right: 16px; /* fix icons not being centered on origin */
+    padding-right: 16px;
     border-radius: 20;
     background: #1f1d2e;
     margin: 5px;
@@ -42,11 +41,11 @@ label.module {
 }
 
 #battery.charging {
-    color: #26A65B;
+    color: #5de4c7;
 }
 
 #battery.warning {
-    color: #5de4c7;
+    color: #fffac2;
 }
 
 #battery.critical {
