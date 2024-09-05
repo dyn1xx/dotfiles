@@ -2,7 +2,7 @@
 
     "layer": "top",
     "modules-left": ["pulseaudio", "battery", "bluetooth", "network#vuorikuja", "network#home"],
-    "modules-center": ["sway/workspaces"],
+    "modules-center": ["hyprland/workspaces"],
     "modules-right": ["clock#day", "clock#week", "clock#date", "clock"],
     "height": 35,
 
@@ -26,9 +26,18 @@
         "format": "󱑒 {:%H:%M}"
     },
 
-    "sway/workspaces": {
+    "hyprland/workspaces": {
+        "disable-scroll": false,
         "all-outputs": true,
-        "format": "{name}",
+        "on-click": "activate",
+        "format": "{icon}",
+        "format-icons": {
+            "1": "󰗃",
+            "2": "",
+            "3": "󰈹",
+            "4": "󰔌",
+            "5": "󰍹"
+        }
     },
 
     "pulseaudio": {

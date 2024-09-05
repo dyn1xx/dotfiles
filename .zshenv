@@ -1,12 +1,13 @@
 # Autostart sway after login
 if [ "$(tty)" = "/dev/tty1" ]; then
-    exec dbus-run-session sway
+    # exec dbus-run-session sway
+    exec Hyprland
 fi
 
 # Default apps
 export EDITOR=/usr/bin/nvim
 export TERMINAL=/usr/bin/alacritty
-export BROWSER=/usr/bin/firefox
+export BROWSER=/usr/bin/zen-browser
 
 # Adds ~/.local/bin and subfolders to $PATH
 export PATH="$PATH:/home/v/.local/share/go/bin:${$(find ~/.local/bin -maxdepth 1 -type d -printf %p:)%%:}"
