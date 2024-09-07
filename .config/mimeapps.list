@@ -14,6 +14,9 @@ application/x-extension-shtml=zen-browser.desktop
 application/xhtml+xml=zen-browser.desktop
 application/x-extension-xhtml=zen-browser.desktop
 application/x-extension-xht=zen-browser.desktop
+x-scheme-handler/mailto=userapp-Thunderbird-PV7GT2.desktop
+message/rfc822=userapp-Thunderbird-PV7GT2.desktop
+x-scheme-handler/mid=userapp-Thunderbird-PV7GT2.desktop
 
 [Added Associations]
 application/x-php=libreoffice-writer.desktop;
@@ -27,3 +30,5 @@ application/x-extension-shtml=zen-browser.desktop;
 application/xhtml+xml=zen-browser.desktop;
 application/x-extension-xhtml=zen-browser.desktop;
 application/x-extension-xht=zen-browser.desktop;
+x-scheme-handler/mailto=userapp-Thunderbird-PV7GT2.desktop;
+x-scheme-handler/mid=userapp-Thunderbird-PV7GT2.desktop;
