@@ -128,6 +128,14 @@ return require('packer').startup(function(use)
         config = function () require('v.plugins.url-open') end
     }
 
+    -- markdown
+    use({
+        'MeanderingProgrammer/render-markdown.nvim',
+        after = { 'nvim-treesitter' },
+        requires = { 'echasnovski/mini.nvim', opt = true },
+        config = function () require('v.plugins.render-markdown') end
+    })
+
     -- debugger
 
 
