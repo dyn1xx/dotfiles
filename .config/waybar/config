@@ -23,7 +23,7 @@
 
     "clock": {
         "interval": 5,
-        "format": "󱑒 {:%H:%M}"
+        "format": "󱑒 {:L%H:%M}"
     },
 
     "hyprland/workspaces": {
