@@ -69,7 +69,7 @@ x = 20
 y = 20
 
 [window]
-opacity = 0.88
+opacity = 0.92
 
 [mouse]
 hide_when_typing = true

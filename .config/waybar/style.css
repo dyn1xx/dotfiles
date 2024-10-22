@@ -18,14 +18,6 @@ label.module {
     margin: 5px;
 }
 
-#workspaces {
-    padding: 0 10px;
-    padding-right: 16px;
-    border-radius: 20;
-    background: #1f1d2e;
-    margin: 5px;
-}
-
 #workspaces button {
     padding: 0 10px;
     border-radius: 20px;
