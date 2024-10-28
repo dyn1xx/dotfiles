@@ -136,6 +136,12 @@ return require('packer').startup(function(use)
         config = function () require('v.plugins.render-markdown') end
     })
 
+    -- filesystem edit
+    use {
+        'stevearc/oil.nvim',
+        config = function () require('v.plugins.oil') end
+    }
+
     -- debugger
 
 
