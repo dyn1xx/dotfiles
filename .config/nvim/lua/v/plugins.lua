@@ -139,6 +139,7 @@ return require('packer').startup(function(use)
     -- filesystem edit
     use {
         'stevearc/oil.nvim',
+        dependencies = { 'nvim-tree/nvim-web-devicons' },
         config = function () require('v.plugins.oil') end
     }
 
