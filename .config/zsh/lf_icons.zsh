@@ -1,12 +1,8 @@
 #!/bin/sh
 
 export LF_ICONS="\
-tw=:\
-st=:\
-ow=:\
-dt=:\
-di=:\
-fi=:\
+di=:\
+fi=:\
 ln=:\
 or=:\
 ex=:\
@@ -160,5 +156,4 @@ ex=:\
 *.spx=:\
 *.xspf=:\
 *.pdf=:\
-*.nix=:\
 "
