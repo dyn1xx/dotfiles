@@ -5,7 +5,10 @@ set icons true
 set sixel true
 
 # previewer
-set previewer ~/.config/lf/preview
+# set previewer ~/.config/lf/preview
+
+# lfcd
+set lfcd ~/.local/bin/lfcd
 
 # custom functions
 cmd mkdir ${{
