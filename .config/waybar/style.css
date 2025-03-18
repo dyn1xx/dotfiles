@@ -7,14 +7,14 @@
 }
 
 window#waybar {
-    background: rgba(0, 0, 0, 0.88);
+    background: rgba(27, 30, 40, 0.96);
     color: white;
 }
 
 label.module {
     padding: 0 10px;
     border-radius: 20;
-    background: #1f1d2e;
+    background: #34394c;
     margin: 5px;
 }
 

@@ -13,11 +13,13 @@ cursor = "#ffffff"
 text = "CellBackground"
 
 [colors.hints.end]
-background = "#1f1d2e"
+# background = "#1f1d2e"
+background = "#1b1e28"
 foreground = "#6e6a86"
 
 [colors.hints.start]
-background = "#1f1d2e"
+# background = "#1f1d2e"
+background = "#1b1e28"
 foreground = "#908caa"
 
 [colors.line_indicator]
@@ -35,7 +37,7 @@ cyan = "#add7ff"
 white = "#ffffff"
 
 [colors.primary]
-background = "#000000"
+background = "#1b1e28"
 foreground = "#ffffff"
 
 [colors.selection]
@@ -69,7 +71,7 @@ x = 20
 y = 20
 
 [window]
-opacity = 0.92
+opacity = 0.96
 
 [mouse]
 hide_when_typing = true
