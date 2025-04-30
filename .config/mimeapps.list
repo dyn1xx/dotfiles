@@ -43,3 +43,4 @@ video/jpeg=imv.desktop
 image/gif=imv.desktop
 image/webp=imv.desktop
 image/tiff=imv.desktop
+x-scheme-handler/discord=vesktop.desktop
