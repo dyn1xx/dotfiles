@@ -18,14 +18,27 @@ label.module {
     margin: 5px;
 }
 
+#workspaces {
+    background: #34394c;
+    margin: 5px;
+    border-radius: 20px;
+}
+
 #workspaces button {
     padding: 0 10px;
-    border-radius: 20px;
     color: white;
+    background-color: transparent;
+    border-radius: 20px;
+    transition: padding 0.1s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    margin: 5px 0px;
 }
 
 #workspaces button.active {
-    color: #5de4c7;
+    color: #34394c;
+    background-color: white;
+    border-radius: 20;
+    margin: 5px;
+    padding: 0 15px;
 }
 
 #workspaces button.urgent {
