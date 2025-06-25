@@ -1,4 +1,4 @@
-# Autostart sway after login
+# Autostart Hyprland after login
 if [ "$(tty)" = "/dev/tty1" ]; then
     # exec dbus-run-session sway
     exec Hyprland
