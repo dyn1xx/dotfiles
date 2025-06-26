@@ -16,3 +16,11 @@ vim.keymap.set("n", "gx", "<esc>:URLOpenUnderCursor<cr>")
 vim.keymap.set({ "n", "v" }, "<leader>H", function()
     vim.cmd("TSToggle highlight")
 end, { noremap = true, silent = true })
+
+-- fix hover treesitter
+vim.keymap.set('n', 'K', function()
+    vim.lsp.buf.hover()
+    vim.defer_fn(function()
+        vim.cmd('TSBufEnable highlight')
+    end, 100)
+end, { noremap = true, silent = true })
