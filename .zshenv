@@ -38,8 +38,5 @@ export PYTHON_HISTORY="$XDG_STATE_HOME/python/history"
 zstyle ':completion:*' cache-path $XDG_CACHE_HOME/zsh/zcompcache
 compinit -d $XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION
 
-# Enable Zoxide
-eval "$(zoxide init zsh)"
-
 # Locale
 export LC_ALL=en_US.UTF-8
