@@ -1,9 +1,9 @@
 {
 
     "layer": "top",
-    "modules-left": ["pulseaudio", "battery", "bluetooth", "network#vuorikuja", "network#home"],
+    "modules-left": ["pulseaudio", "battery", "bluetooth", "cpu", "network#vuorikuja", "network#home"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["cpu", "clock#day", "clock#week", "clock#date", "clock"],
+    "modules-right": ["clock#day", "clock#week", "clock#date", "clock"],
     "height": 35,
 
     "cpu": {

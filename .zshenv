@@ -13,6 +13,10 @@ export BROWSER=/usr/bin/chromium
 export PATH="$PATH:/home/v/.local/share/go/bin:${$(find ~/.local/bin -maxdepth 1 -type d -printf %p:)%%:}"
 export PATH="$PATH:/home/v/.cargo/bin"
 
+# Wayland
+export OZONE_PLATFORM=wayland
+export SDL_VIDEODRIVER=wayland
+
 # Cleaning up home dir
 export ZDOTDIR="$HOME/.config/zsh"
 
