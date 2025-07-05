@@ -78,3 +78,4 @@ map gn cd ~/notes
 map gc cd ~/.config
 map gm cd ~/media
 map gn cd ~/notes
+map gst cd ~/.steam/steam/steamapps/common
