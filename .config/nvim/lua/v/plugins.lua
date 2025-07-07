@@ -132,7 +132,6 @@ return require('packer').startup(function(use)
     use({
         'MeanderingProgrammer/render-markdown.nvim',
         after = { 'nvim-treesitter' },
-        requires = { 'echasnovski/mini.nvim', opt = true },
         config = function () require('v.plugins.render-markdown') end
     })
 
