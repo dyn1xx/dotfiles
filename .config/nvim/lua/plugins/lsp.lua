@@ -16,6 +16,8 @@ return {
                 ensure_installed = {
                     "lua_ls",
                     "gopls",
+                    "pylsp",
+                    "ts_ls",
                 }
             }
         end,
