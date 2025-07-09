@@ -34,12 +34,3 @@ vim.opt.updatetime = 50
 
 -- cursorline
 vim.opt.cursorline = true
-
--- neovide
-vim.g.neovide_transparency = 0.88
-vim.g.neovide_padding_top = 40
-vim.g.neovide_padding_bottom = 40
-vim.g.neovide_padding_right = 40
-vim.g.neovide_padding_left = 40
-vim.g.neovide_hide_mouse_when_typing = true
-vim.g.experimental_layer_grouping = true
