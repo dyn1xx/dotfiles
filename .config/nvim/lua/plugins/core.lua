@@ -198,6 +198,7 @@ return {
         end
     },
 
+    -- hex colors
     {
         'norcalli/nvim-colorizer.lua',
         config = function ()
