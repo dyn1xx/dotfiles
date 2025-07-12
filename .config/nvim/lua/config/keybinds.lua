@@ -9,6 +9,9 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 vim.keymap.set({ "n", "v" }, "<leader>p", [["+p]])
 vim.keymap.set("n", "<leader>P", [["+P]])
 
+-- insert empty line
+vim.keymap.set("n", "<leader>o", ":put _<CR>")
+
 -- refresh treesitter highlighting
 vim.keymap.set({ "n", "v" }, "<leader>H", function()
     vim.cmd("TSToggle highlight")
