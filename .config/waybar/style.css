@@ -56,3 +56,24 @@ label.module {
 #battery.critical {
     color: #d0679d;
 }
+
+#tray {
+    background: #34394c;
+    margin: 5px;
+    border-radius: 20px;
+    padding: 0 10px;
+}
+
+#tray > * {
+    margin: 0 5px;
+}
+
+tooltip {
+    background: #34394c;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 8px 12px;
+    font-family: hack;
+    font-size: 14px;
+    border: 1px solid #444;
+}
