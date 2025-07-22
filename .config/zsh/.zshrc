@@ -9,12 +9,6 @@ HISTFILE="$XDG_CACHE_DIR/zsh/history"
 # Aliases
 plug "$XDG_CONFIG_HOME/zsh/aliases.zsh"
 
-# lf icons
-plug "$XDG_CONFIG_HOME/zsh/lf_icons.zsh"
-
-# lf cd-script
-source ~/.local/bin/lfcd
-
 # Options
 unsetopt menu_complete
 unsetopt flowcontrol
