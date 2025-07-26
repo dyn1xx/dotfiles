@@ -15,3 +15,5 @@ icons=0
 max-icon-size=64
 default-timeout=5000
 ignore-timeout=1
+shadow-color=#000000cc
+shadow-radius=5

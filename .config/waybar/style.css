@@ -67,13 +67,3 @@ label.module {
 #tray > * {
     margin: 0 5px;
 }
-
-tooltip {
-    background: #34394c;
-    color: #ffffff;
-    border-radius: 10px;
-    padding: 8px 12px;
-    font-family: hack;
-    font-size: 14px;
-    border: 1px solid #444;
-}
