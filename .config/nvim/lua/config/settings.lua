@@ -34,3 +34,7 @@ vim.opt.updatetime = 50
 
 -- cursorline
 vim.opt.cursorline = true
+
+-- borders
+vim.opt.winborder = "rounded"
+vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#A6ACCD" })
