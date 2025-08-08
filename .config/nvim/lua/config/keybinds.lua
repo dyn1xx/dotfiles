@@ -25,3 +25,13 @@ vim.keymap.set('n', 'K', function()
         vim.cmd('TSBufEnable highlight')
     end, 100)
 end, { noremap = true, silent = true })
+
+-- mason
+vim.keymap.set({ "n", "v" }, "<leader>m", function()
+    vim.cmd("Mason")
+end, { noremap = true, silent = true })
+
+-- lazy
+vim.keymap.set({ "n", "v" }, "<leader>z", function()
+    vim.cmd("Lazy")
+end, { noremap = true, silent = true })
