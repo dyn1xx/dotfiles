@@ -32,6 +32,6 @@ vim.keymap.set({ "n", "v" }, "<leader>m", function()
 end, { noremap = true, silent = true })
 
 -- lazy
-vim.keymap.set({ "n", "v" }, "<leader>z", function()
+vim.keymap.set({ "n", "v" }, "<leader>l", function()
     vim.cmd("Lazy")
 end, { noremap = true, silent = true })
