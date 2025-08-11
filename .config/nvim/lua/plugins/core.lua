@@ -132,7 +132,7 @@ return {
     {
         "ThePrimeagen/harpoon",
         branch = "harpoon2",
-        dependencies = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope.nvim" },
+        dependencies = { "nvim-lua/plenary.nvim" },
         config = function()
             local harpoon = require("harpoon")
 
@@ -145,40 +145,6 @@ return {
             vim.keymap.set("n", "<C-j>", function() harpoon:list():select(2) end)
             vim.keymap.set("n", "<C-k>", function() harpoon:list():select(3) end)
             vim.keymap.set("n", "<C-l>", function() harpoon:list():select(4) end)
-        end,
-    },
-
-    -- zen-mode
-    {
-        "folke/zen-mode.nvim",
-        event = "VeryLazy",
-        opts = {},
-        config = function()
-            vim.keymap.set("n", "<leader>z", vim.cmd.ZenMode)
-
-            require("zen-mode").setup({
-                window = {
-                    width = 80,
-                    height = .85,
-                    options = {
-                        number = false, -- disable number column
-                        relativenumber = false, -- disable number column
-                    }
-                },
-
-                -- actions to execute when the Zen window opens
-                on_open = function()
-                    vim.opt.linebreak = true
-                    vim.opt.wrap = true
-                    vim.opt.spell = true
-                end,
-                -- actions to execute when the Zen window closes
-                on_close = function()
-                    vim.opt.linebreak = false
-                    vim.opt.wrap = false
-                    vim.opt.spell = false
-                end,
-            })
         end,
     },
 

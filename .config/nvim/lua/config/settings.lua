@@ -37,8 +37,9 @@ vim.opt.cursorline = true
 
 -- borders
 vim.opt.winborder = "rounded"
-vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#A6ACCD" })
+local float_fg = vim.api.nvim_get_hl(0, { name = "NormalFloat" }).fg
+vim.api.nvim_set_hl(0, "FloatBorder", { fg = float_fg })
 
 -- diagnostic pop-up
-vim.o.updatetime = 250
+vim.o.updatetime = 0
 vim.cmd [[autocmd CursorHold * lua vim.diagnostic.open_float(nil, {focus=false})]]
