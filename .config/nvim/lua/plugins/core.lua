@@ -21,29 +21,37 @@ return {
 
     -- fuzzer
     {
-        "nvim-telescope/telescope.nvim",
-        tag = "0.1.5",
-        dependencies = { "nvim-lua/plenary.nvim" },
+        "echasnovski/mini.pick",
+        version = false,
         config = function()
-            require("telescope").setup({
-                defaults = {
-                    layout_strategy = "horizontal",
-                    sorting_strategy = "descending",
-                },
-                pickers = {
-                    find_files = {
-                        hidden = true,
-                    },
+            local pick = require("mini.pick")
+
+            pick.setup({
+                -- Default UI behavior
+                options = {
+                    content_from_bottom = false,
+                    use_cache = true,
                 },
             })
 
-            local builtin = require("telescope.builtin")
-            vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Telescope find files" })
-            vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live grep" })
-            vim.keymap.set("n", "<leader>fb", builtin.buffers,   { desc = "Telescope buffers" })
-            vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
+            local map = vim.keymap.set
+            local opts = { noremap = true, silent = true }
 
-            local colors = require("poimandres.palette")
+            map("n", "<leader>ff", function()
+                pick.builtin.files({ filter = { show_hidden = true } })
+            end, vim.tbl_extend("force", opts, { desc = "MiniPick find files" }))
+
+            map("n", "<leader>fg", function()
+                pick.builtin.grep_live()
+            end, vim.tbl_extend("force", opts, { desc = "MiniPick live grep" }))
+
+            map("n", "<leader>fb", function()
+                pick.builtin.buffers()
+            end, vim.tbl_extend("force", opts, { desc = "MiniPick buffers" }))
+
+            map("n", "<leader>fh", function()
+                pick.builtin.help()
+            end, vim.tbl_extend("force", opts, { desc = "MiniPick help tags" }))
         end,
     },
 
@@ -206,6 +214,7 @@ return {
         end
     },
 
+    -- inline diagnostic
     {
         "rachartier/tiny-inline-diagnostic.nvim",
         event = "VeryLazy",
