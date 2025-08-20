@@ -2,25 +2,30 @@
 set font "hack bold 13"
 
 # Color-scheme
-set default-bg                  "#000000"
+set default-bg                  "#1b1e28"
 set default-fg                  "#ffffff"
 
+set statusbar-bg                "#1b1e28"
 set statusbar-fg                "#ffffff"
-set statusbar-bg                "#000000"
 
-set inputbar-bg                 "#000000"
+set inputbar-bg                 "#1b1e28"
 set inputbar-fg                 "#ffffff"
 
-set notification-bg             "#34394c"
-set notification-fg             "#ffffff"
+set notification-bg             "#5de4c7"
+set notification-fg             "#a6accd"
 
-set notification-error-bg       "#000000"
-set notification-error-fg       "#d0679d"
+set notification-error-bg       "#d0679d"
+set notification-error-fg       "#a6accd"
 
-set notification-warning-bg     "#000000"
-set notification-warning-fg     "#fffac2"
+set notification-warning-bg     "#fffac2"
+set notification-warning-fg     "#a6accd"
 
-set recolor                     "false"
-set recolor-keephue             "false"
+# Dark theme
+set recolor                     "true"
+set recolor-keephue             "true"
 
+set recolor-lightcolor          "#1b1e28"
+set recolor-darkcolor           "#ffffff"
+
+# Other
 set selection-clipboard clipboard
