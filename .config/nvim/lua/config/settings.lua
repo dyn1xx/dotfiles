@@ -43,3 +43,32 @@ vim.api.nvim_set_hl(0, "FloatBorder", { fg = float_fg })
 -- diagnostic pop-up
 vim.o.updatetime = 0
 vim.cmd [[autocmd CursorHold * lua vim.diagnostic.open_float(nil, {focus=false})]]
+
+-- transparent bg
+vim.cmd([[
+    hi Normal guibg=none ctermbg=none
+    hi NormalNC guibg=none ctermbg=none
+    hi NormalFloat guibg=none ctermbg=none
+    hi FloatBorder guibg=none ctermbg=none
+    hi SignColumn guibg=none ctermbg=none
+    hi LineNr guibg=none ctermbg=none
+    hi Folded guibg=none ctermbg=none
+    hi NonText guibg=none ctermbg=none
+    hi SpecialKey guibg=none ctermbg=none
+    hi VertSplit guibg=none ctermbg=none
+    hi EndOfBuffer guibg=none ctermbg=none
+    hi WinSeparator guibg=none ctermbg=none
+    hi TabLine guibg=none ctermbg=none
+    hi TabLineFill guibg=none ctermbg=none
+    hi TabLineSel guibg=none ctermbg=none
+    hi Pmenu guibg=none ctermbg=none
+    hi PmenuSel guibg=none ctermbg=none
+    hi PmenuSbar guibg=none ctermbg=none
+    hi PmenuThumb guibg=none ctermbg=none
+]])
+
+-- statusline color
+vim.cmd([[
+    hi! link StatusLine String
+    hi! link StatusLineNC Comment
+]])

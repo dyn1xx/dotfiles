@@ -14,7 +14,6 @@ return {
                 },
                 highlight = {
                     enable = true,
-                    disable = { "markdown" }
                 },
 
                 ensure_installed = {

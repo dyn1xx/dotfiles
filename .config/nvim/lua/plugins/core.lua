@@ -1,24 +1,5 @@
 return {
 
-    -- colorscheme
-    { 
-        'olivercederborg/poimandres.nvim',
-        lazy = false,
-        priority = 1000,
-        config = function()
-            require('poimandres').setup {
-                disable_background = true,
-                disable_float_background = true,
-                dim_nc_background = true,
-            }
-        end,
-
-        -- set the colorscheme within lazy config
-        init = function()
-            vim.cmd("colorscheme poimandres")
-        end,
-    },
-
     -- fuzzer
     {
         "echasnovski/mini.pick",
@@ -83,37 +64,6 @@ return {
         },
         dependencies = { { "nvim-tree/nvim-web-devicons", opts = {} } },
         lazy = false,
-    },
-
-    -- bar
-    {
-        'nvim-lualine/lualine.nvim',
-        dependencies = { 'nvim-tree/nvim-web-devicons' },
-        config = function()
-            require('lualine').setup {
-                options = {
-                    theme = 'poimandres',
-                    section_separators = { left = '', right = '' },
-                    component_separators = { left = '', right = '' },
-                },
-                sections = {
-                    lualine_a = {
-                        { 'mode', separator = { left = '', right = '' }, right_padding = 1 },
-                    },
-                    lualine_b = {
-                        { 'branch', separator = { left = '', right = '' }, padding = { left = 1, right = 1 } },
-                    },
-                    lualine_c = { 'filename' },
-                    lualine_x = { 'filetype' },
-                    lualine_y = {
-                        { 'progress', separator = { left = '', right = '' }, padding = { left = 1, right = 1 } },
-                    },
-                    lualine_z = {
-                        { 'location', separator = { left = '', right = '' }, padding = { left = 1, right = 1 } },
-                    },
-                },
-            }
-        end,
     },
 
     -- indent blankline
