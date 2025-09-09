@@ -122,4 +122,12 @@ return {
         end
     },
 
+    -- color code preview
+    {
+        'norcalli/nvim-colorizer.lua',
+        config = function ()
+            require 'colorizer'.setup()
+        end
+    }
+
 }

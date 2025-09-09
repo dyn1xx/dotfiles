@@ -7,19 +7,19 @@
 }
 
 window#waybar {
-    background: rgba(27, 30, 40, 0.96);
+    background: transparent;
     color: white;
 }
 
 label.module {
     padding: 0 10px;
     border-radius: 20;
-    background: #34394c;
+    background: #14161b;
     margin: 5px;
 }
 
 #workspaces {
-    background: #34394c;
+    background: #14161b;
     margin: 5px;
     border-radius: 20px;
 }
@@ -58,7 +58,7 @@ label.module {
 }
 
 #tray {
-    background: #34394c;
+    background: #14161b;
     margin: 5px;
     border-radius: 20px;
     padding: 0 10px;
