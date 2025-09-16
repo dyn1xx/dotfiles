@@ -1,10 +1,10 @@
 font=Hack 13
-text-color=#ffffff
+text-color="#E0E2EA"
+background-color="#14161b"
 format=<b>%a ⏵</b> %s\n%b
 sort=-time
 layer=overlay
 anchor=top-center
-background-color=#34394c
 width=400
 height=110
 margin=20
