@@ -1,98 +1,153 @@
 {
-
+    "reload_style_on_change": true,
     "layer": "top",
-        "modules-left": ["pulseaudio", "battery", "bluetooth", "cpu", "tray", "network#vuorikuja", "network#home"],
-        "modules-center": ["hyprland/workspaces"],
-        "modules-right": ["clock#day", "clock#week", "clock#date", "clock"],
-        "height": 35,
+    "modules-left": ["clock"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["group/tray-expander", "network#vuorikuja", "network#home", "bluetooth", "battery", "pulseaudio"],
+    "height": 36,
 
-        "cpu": {
-            "interval": 1,
-            "format": "{icon0}{icon1}{icon2}{icon3}{icon4}{icon5}{icon6}{icon7}",
-            "format-icons": [
-                "<span color='#69ff94'>▁</span>", // green
-            "<span color='#2aa9ff'>▂</span>", // blue
-            "<span color='#f8f8f2'>▃</span>", // white
-            "<span color='#f8f8f2'>▄</span>", // white
-            "<span color='#ffffa5'>▅</span>", // yellow
-            "<span color='#ffffa5'>▆</span>", // yellow
-            "<span color='#ff9977'>▇</span>", // orange
-            "<span color='#dd532e'>█</span>"  // red
-            ]
+    "clock": {
+        "format": "   {:%R}",
+        // "format": "   {:%R | %d-%m-%y | %a}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 3,
+            "weeks-pos": "right",
+            "on-scroll": 1,
+            "format": {
+                "months":     "<span color='#95C5E5'><b>{}</b></span>",
+                "days":       "<span color='#C4C6CD'><b>{}</b></span>",
+                "weeks":      "<span color='#A2DFC0'><b>W{}</b></span>",
+                "weekdays":   "<span color='#E3CA85'><b>{}</b></span>",
+                "today":      "<span color='#E0E2EA'><b><u>{}</u></b></span>"}
         },
+        "actions": {
+            "on-click-right": "mode",
+            "on-scroll-up": "tz_up",
+            "on-scroll-down": "tz_down",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        }
+    },
 
-        "clock#day": {
-            "interval": 60,
-            "format": "󰃭 {:%a}"
+    "hyprland/workspaces": {
+        "disable-scroll": false,
+        "all-outputs": true,
+        "on-click": "activate",
+        "format": "{icon}",
+        "format-icons": {
+            "empty": "",
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "󰹑",
+            "6": "",
+            "7": "󱣴",
+            "8": "󰓓",
+            "9": "",
+            "10": "",
         },
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": [],
+            "6": [],
+            "7": [],
+            "8": [],
+            "9": [],
+            "10": []
+        },
+    },
 
-        "clock#week": {
-            "interval": 60,
-            "format": "󰨳 {:%V}"
-        },
+    // "pulseaudio": {
+    //     "scroll-step": 5,
+    //     "format": "",
+    //     // "format": " {volume}%",
+    //     "format-bluetooth": "",
+    //     "format-muted": "",
+    //     "on-click": "amixer -q set Master toggle",
+    // },
 
-        "clock#date": {
-            "interval": 60,
-            "format": "󰃮 {:%d-%m-%y}"
-        },
+    "pulseaudio": {
+        "format": "{icon}",
+        "on-click": "pavucontrol",
+        "on-click-right": "amixer -q set Master toggle",
+        "tooltip-format": "Volume: {volume}%",
+        "scroll-step": 5,
+        "format-muted": " ",
+        "format-icons": {
+            "default": [" ", " ", " "]
+        }
+    },
 
-        "clock": {
-            "interval": 5,
-            "format": "󱑒 {:L%H:%M}"
+    "battery": {
+        "format": "{icon}",
+        "format-discharging": "{icon}",
+        "format-charging": "{icon}",
+        "format-plugged": "",
+        "format-icons": {
+            "charging": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
+            "default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
         },
+        "format-full": "󰂅",
+        "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
+        "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
+        "interval": 5,
+        // "on-click": "",
+        "states": {
+            "warning": 50,
+            "critical": 25
+        }
+    },
 
-        "hyprland/workspaces": {
-            "disable-scroll": false,
-            "all-outputs": true,
-            "on-click": "activate",
-        },
+    "bluetooth": {
+        "interval": 15,
+        "format": "",
+        "format-disabled": "󰂲",
+        "format-connected": "",
+        // "format-connected": " {device_battery_percentage}% connected",
+        "tooltip-format": "{controller_alias}\t{controller_address}",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "on-click": "blueman-manager",
+    },
 
-        "pulseaudio": {
-            "scroll-step": 5,
-            "format": " {volume}%",
-            "format-bluetooth": "  {volume}%",
-            "format-muted": " {volume}%",
-            "on-click": "amixer -q set Master toggle",
-        },
+    "network#vuorikuja": {
+        "interval": 15,
+        "interface": "vuorikuja",
+        "format": "󰖂 {ifname}",
+        "format-disconnected": "", //An empty format will hide the module.
+    },
 
-        "battery": {
-            "interval": 15,
-            "format": "{icon} {capacity}%",
-            "format-icons": [" ", " ", " ", " ", " "],
-            "states": {
-                "warning": 40,
-                "critical": 20
-            }
-        },
+    "network#home": {
+        "interval": 15,
+        "interface": "home",
+        "format": "󰖂 {ifname}",
+        "format-disconnected": "", //An empty format will hide the module.
+    },
 
-        "bluetooth": {
-            "interval": 15,
-            "format": " {status}",
-            "format-disabled": "", // an empty format will hide the module
-            "format-connected": " {device_battery_percentage}% connected",
-            "tooltip-format": "{controller_alias}\t{controller_address}",
-            "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
-            "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}"
-        },
+    "tray": {
+        "icon-size": 20,
+        "spacing": 10,
+        "show-passive-items": true,
+    },
 
-        "network#vuorikuja": {
-            "interval": 15,
-            "interface": "vuorikuja",
-            "format": "󰖂 {ifname}",
-            "format-disconnected": "", //An empty format will hide the module.
+    "group/tray-expander": {
+        "orientation": "inherit",
+        "drawer": {
+            "transition-duration": 600,
+            "children-class": "tray-group-item"
         },
+        "modules": ["custom/expand-icon", "tray"]
+    },
 
-        "network#home": {
-            "interval": 15,
-            "interface": "home",
-            "format": "󰖂 {ifname}",
-            "format-disconnected": "", //An empty format will hide the module.
-        },
-
-        "tray": {
-            "icon-size": 20,
-            "spacing": 10,
-            "show-passive-items": true,
-        },
+    "custom/expand-icon": {
+        "format": " ",
+        "tooltip": false
+    },
 
 }

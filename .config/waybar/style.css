@@ -1,69 +1,82 @@
+@define-color bg #14161b;
+@define-color fg #E0E2EA;
+@define-color dim-fg #C4C6CD;
+@define-color bright-fg #E0E2EA;
+
+@define-color black #2c2e33;
+@define-color red #E5ADB9;
+@define-color green #A2DFC0;
+@define-color yellow #E3CA85;
+@define-color blue #95C5E5;
+@define-color magenta #E5B6E6;
+@define-color cyan #7EDFDE;
+@define-color white #C4C6CD;
+
 * {
-    border: none;
-    border-radius: 0;
     font-family: hack;
     font-size: 16px;
-    min-height: 0;
+    min-height: 36px;
+    font-weight: bold;
 }
 
 window#waybar {
-    background: transparent;
-    color: white;
+    background: @bg;
+    color: @fg;
 }
 
 label.module {
     padding: 0 10px;
-    border-radius: 20;
-    background: #14161b;
-    margin: 5px;
-}
-
-#workspaces {
-    background: #14161b;
-    margin: 5px;
-    border-radius: 20px;
 }
 
 #workspaces button {
     padding: 0 10px;
-    color: white;
-    background-color: transparent;
-    border-radius: 20px;
-    transition: padding 0.1s cubic-bezier(0.785, 0.135, 0.15, 0.86);
-    margin: 5px 0px;
+    color: @green;
 }
 
 #workspaces button.active {
-    color: #34394c;
-    background-color: white;
-    border-radius: 20;
-    margin: 5px;
-    padding: 0 15px;
+    color: @bright-fg;
+}
+
+#workspaces button.empty {
+    color: @black;
 }
 
 #workspaces button.urgent {
-    color: #d0679d;
+    color: @red;
 }
 
 #battery.charging {
-    color: #5de4c7;
+    color: @green;
 }
 
 #battery.warning {
-    color: #fffac2;
+    color: @yellow;
 }
 
 #battery.critical {
-    color: #d0679d;
+    color: @red;
 }
 
 #tray {
-    background: #14161b;
-    margin: 5px;
-    border-radius: 20px;
     padding: 0 10px;
 }
 
-#tray > * {
-    margin: 0 5px;
+#bluetooth {
+    color: @fg;
+}
+
+#bluetooth.disabled {
+    color: @red;
+}
+
+#bluetooth.connected {
+    color: @blue;
+}
+
+#pulseaudio.bluetooth {
+    color: @blue;
+}
+
+#pulseaudio.muted {
+    color: @red;
 }
