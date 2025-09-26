@@ -3,12 +3,11 @@
     "layer": "top",
     "modules-left": ["clock"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["group/tray-expander", "network#vuorikuja", "network#home", "bluetooth", "battery", "pulseaudio"],
+    "modules-right": ["group/tray-expander", "network#vuorikuja", "network#home", "network", "bluetooth", "battery", "pulseaudio"],
     "height": 36,
 
     "clock": {
-        "format": "   {:%R}",
-        // "format": "   {:%R | %d-%m-%y | %a}",
+        "format": "  {:%R |  %d-%m}",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "calendar": {
             "mode": "month",
@@ -27,8 +26,9 @@
             "on-scroll-up": "tz_up",
             "on-scroll-down": "tz_down",
             "on-scroll-up": "shift_up",
-            "on-scroll-down": "shift_down"
-        }
+            "on-scroll-down": "shift_down",
+        },
+        "on-click": "merkuro-calendar"
     },
 
     "hyprland/workspaces": {
@@ -63,20 +63,11 @@
         },
     },
 
-    // "pulseaudio": {
-    //     "scroll-step": 5,
-    //     "format": "",
-    //     // "format": " {volume}%",
-    //     "format-bluetooth": "",
-    //     "format-muted": "",
-    //     "on-click": "amixer -q set Master toggle",
-    // },
-
     "pulseaudio": {
         "format": "{icon}",
         "on-click": "pavucontrol",
         "on-click-right": "amixer -q set Master toggle",
-        "tooltip-format": "Volume: {volume}%",
+        "tooltip-format": "Volume: {volume}%\nDevice: {desc}",
         "scroll-step": 5,
         "format-muted": " ",
         "format-icons": {
@@ -97,11 +88,11 @@
         "tooltip-format-discharging": "{power:>1.0f}W↓ {capacity}%",
         "tooltip-format-charging": "{power:>1.0f}W↑ {capacity}%",
         "interval": 5,
-        // "on-click": "",
         "states": {
             "warning": 50,
             "critical": 25
         }
+        // "on-click": "",
     },
 
     "bluetooth": {
@@ -109,25 +100,39 @@
         "format": "",
         "format-disabled": "󰂲",
         "format-connected": "",
-        // "format-connected": " {device_battery_percentage}% connected",
-        "tooltip-format": "{controller_alias}\t{controller_address}",
-        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
-        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "tooltip-format": "Bluetooth: {status}\nConnections: {num_connections}",
+        "tooltip-format-connected": "Bluetooth: {status}\nConnections: {num_connections}\nDevice: {device_alias}",
+        "tooltip-format-connected-battery": "Bluetooth: {status}\nConnections: {num_connections}\nDevice: {device_alias} | {device_battery_percentage}%",
         "on-click": "blueman-manager",
     },
 
     "network#vuorikuja": {
         "interval": 15,
         "interface": "vuorikuja",
-        "format": "󰖂 {ifname}",
-        "format-disconnected": "", //An empty format will hide the module.
+        "format": "󰖂",
+        "format-disconnected": "",
+        "tooltip-format": "VPN: {ifname}"
     },
 
     "network#home": {
         "interval": 15,
         "interface": "home",
-        "format": "󰖂 {ifname}",
-        "format-disconnected": "", //An empty format will hide the module.
+        "format": "󰖂",
+        "format-disconnected": "",
+        "tooltip-format": "VPN: {ifname}"
+    },
+
+    "network": {
+        "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+        "format": "{icon}",
+        "format-wifi": "{icon}",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰤮",
+        "tooltip-format-wifi": "{essid} ({frequency} GHz)\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+        "tooltip-format-ethernet": "⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+        "tooltip-format-disconnected": "Disconnected",
+        "interval": 3,
+        "spacing": 1,
     },
 
     "tray": {

@@ -80,3 +80,11 @@ label.module {
 #pulseaudio.muted {
     color: @red;
 }
+
+#network.disconnected {
+    color: @red;
+}
+
+#network.disabled {
+    color: @red;
+}
