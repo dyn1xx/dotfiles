@@ -28,6 +28,22 @@ label.module {
     padding: 0 10px;
 }
 
+tooltip {
+    background: @bg;
+    border: 2px solid @green;
+    border-radius: 18px;
+}
+
+tooltip label {
+    color: @fg;
+}
+
+#tray menu {
+    background: @bg;
+    color: @fg;
+    border: 2px solid @green;
+}
+
 #workspaces button {
     padding: 0 10px;
     color: @green;
