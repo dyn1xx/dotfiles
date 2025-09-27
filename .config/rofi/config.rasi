@@ -1,0 +1,97 @@
+* {
+    bg: #14161b;
+    fg: #E6E6E6;
+    black:  #2c2e33;
+    green: #A2DFC0;
+    blue: #95C5E5;
+
+    font: "Hack 13";
+    text-color: @fg;
+}
+
+configuration {
+    drun {
+        display-name: "";
+    }
+}
+
+window {
+    width: 480;
+    border-radius: 18px;
+    border: 2px;
+    border-color: @green;
+    background-color: @bg;
+}
+
+mainbox {
+    padding: 12px;
+    background-color: @bg;
+}
+
+inputbar {
+    background-color: @black;
+    border-radius:  18px;
+    padding: 8px 16px;
+    spacing: 8px;
+    children: [ prompt, entry ];
+}
+
+prompt {
+    text-color: @blue;
+}
+
+entry {
+    placeholder: "";
+    placeholder-color: @fg;
+    text-color: @fg;
+}
+
+prompt {
+    padding: 0px 10px 0px 0px;
+}
+
+textbox {
+    padding: 8px 24px;
+}
+
+listview {
+    scrollbar: false;
+    margin: 12px 0 0;
+    lines: 8;
+    columns: 1;
+    fixed-height: true;
+    border: none;
+}
+
+element {
+    children: [element-icon, element-text];
+    padding: 8px 16px;
+    spacing: 8px;
+    border-radius: 18px;
+}
+
+element-icon {
+    size: 1em;
+    vertical-align: 0.5;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: @fg;
+}
+
+element.selected.normal {
+    background-color: transparent; border: 0px;
+}
+
+element-text.selected {
+    text-color: @blue;
+}
+
+element normal.normal {
+    background-color: transparent;
+}
+
+element.alternate.normal {
+    background-color: transparent;
+}
