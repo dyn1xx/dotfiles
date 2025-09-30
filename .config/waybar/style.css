@@ -104,3 +104,8 @@ tooltip label {
 #network.disabled {
     color: @red;
 }
+
+#custom-mako {
+    color: @red;
+}
+

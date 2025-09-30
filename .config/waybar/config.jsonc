@@ -3,7 +3,7 @@
     "layer": "top",
     "modules-left": ["clock"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["group/tray-expander", "network#vuorikuja", "network#home", "network", "bluetooth", "battery", "pulseaudio"],
+    "modules-right": ["custom/mako", "group/tray-expander", "network#vuorikuja", "network#home", "network", "bluetooth", "battery", "pulseaudio"],
     "height": 36,
 
     "clock": {
@@ -152,6 +152,12 @@
 
     "custom/expand-icon": {
         "format": " ",
+        "tooltip": false
+    },
+
+    "custom/mako": {
+        "exec": "test -f $XDG_RUNTIME_DIR/mako-disabled && echo ' DND' || echo ''",
+        "interval": 2,
         "tooltip": false
     },
 
