@@ -3,7 +3,7 @@
     "layer": "top",
     "modules-left": ["clock"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["custom/mako", "group/tray-expander", "network#vuorikuja", "network#home", "network", "bluetooth", "battery", "pulseaudio"],
+    "modules-right": ["group/tray-expander", "custom/mako", "network#vuorikuja", "network#home", "network", "bluetooth", "battery", "pulseaudio"],
     "height": 36,
 
     "clock": {
