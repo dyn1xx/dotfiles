@@ -3,7 +3,7 @@
     "layer": "top",
     "modules-left": ["clock"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["group/tray-expander", "custom/mako", "network#vuorikuja", "network#home", "network", "bluetooth", "battery", "pulseaudio"],
+    "modules-right": ["group/tray-expander", "custom/mako", "network#texas", "network#finland", "network#parents", "network#home", "network", "bluetooth", "battery", "pulseaudio"],
     "height": 36,
 
     "clock": {
@@ -106,9 +106,25 @@
         "on-click": "blueman-manager",
     },
 
-    "network#vuorikuja": {
+    "network#texas": {
         "interval": 15,
-        "interface": "vuorikuja",
+        "interface": "texas",
+        "format": "󰖂",
+        "format-disconnected": "",
+        "tooltip-format": "VPN: {ifname}"
+    },
+
+    "network#finland": {
+        "interval": 15,
+        "interface": "finland",
+        "format": "󰖂",
+        "format-disconnected": "",
+        "tooltip-format": "VPN: {ifname}"
+    },
+
+    "network#parents": {
+        "interval": 15,
+        "interface": "parents",
         "format": "󰖂",
         "format-disconnected": "",
         "tooltip-format": "VPN: {ifname}"
