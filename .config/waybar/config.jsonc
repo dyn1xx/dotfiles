@@ -157,7 +157,7 @@
 
     "custom/mako": {
         "exec": "test -f $XDG_RUNTIME_DIR/mako-disabled && echo '' || echo ''",
-        "interval": 2,
+        "interval": 1,
         "tooltip": false
     },
 
