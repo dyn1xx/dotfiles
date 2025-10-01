@@ -11,3 +11,4 @@ alias song='yt-dlp -x --audio-format mp3 -o "$HOME/media/music/%(channel)s - %(t
 alias calc='qalc'
 alias backup='rsync -avh --info=progress2 media personal school notes /mnt/nas'
 alias fix_hyprlock="hyprctl --instance 0 'keyword misc:allow_session_lock_restore 1' && hyprctl --instance 0 'dispatch exec hyprlock'"
+alias lock="$HOME/.local/bin/hyprlock_idle"
