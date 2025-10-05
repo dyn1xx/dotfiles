@@ -50,3 +50,4 @@ x-scheme-handler/https=zen.desktop
 x-scheme-handler/mailto=userapp-Thunderbird-PV7GT2.desktop
 x-scheme-handler/mid=userapp-Thunderbird-PV7GT2.desktop
 x-scheme-handler/prusaslicer=PrusaSlicerURLProtocol.desktop
+video/x-matroska=mpv.desktop
