@@ -46,6 +46,9 @@ export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship.toml"
 # Start tmux if not already in tmux
 [ -n "$TMUX" ] || exec tmux new-session -A -s main
 
+# Fix kitty ssh
+[ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
