@@ -7,10 +7,6 @@ on  = ["g", "m"]
 run = 'cd "~/media/"'
 
 [[mgr.prepend_keymap]]
-on  = ["g", "n"]
-run = 'cd "~/notes/"'
-
-[[mgr.prepend_keymap]]
 on  = ["g", "p"]
 run = 'cd "~/personal/"'
 
@@ -29,3 +25,7 @@ run = 'cd "~/media/pictures/"'
 [[mgr.prepend_keymap]]
 on  = ["g", "v"]
 run = 'cd "~/media/videos/"'
+
+[[mgr.prepend_keymap]]
+on  = ["g", "n"]
+run = 'cd "/mnt/nas"'
