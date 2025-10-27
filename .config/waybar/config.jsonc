@@ -3,7 +3,7 @@
     "layer": "top",
     "modules-left": ["clock"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["group/tray-expander", "custom/mako", "network#texas", "network#finland", "network#parents", "network#home", "network", "bluetooth", "battery", "pulseaudio"],
+    "modules-right": ["group/tray-expander", "custom/mako", "network#texas", "network#finland", "network#parents", "network#home", "battery", "pulseaudio"],
     "height": 36,
 
     "clock": {
@@ -64,22 +64,22 @@
     },
 
     "pulseaudio": {
-        "format": "{icon}",
+        "format": "{volume}% {icon}",
         "on-click": "pavucontrol",
         "on-click-right": "amixer -q set Master toggle",
         "tooltip-format": "Volume: {volume}%\nDevice: {desc}",
         "scroll-step": 5,
-        "format-muted": " ",
+        "format-muted": "{volume}%  ",
         "format-icons": {
             "default": [" ", " ", " "]
         }
     },
 
     "battery": {
-        "format": "{icon}",
-        "format-discharging": "{icon}",
-        "format-charging": "{icon}",
-        "format-plugged": "",
+        "format": "{capacity}% {icon}",
+        "format-discharging": "{capacity}% {icon}",
+        "format-charging": "{capacity}% {icon}",
+        "format-plugged": "{capacity}% ",
         "format-icons": {
             "charging": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
             "default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
