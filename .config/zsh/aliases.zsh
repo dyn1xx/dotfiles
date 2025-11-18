@@ -10,7 +10,7 @@ alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
 alias song='yt-dlp -x --audio-format mp3 -o "$HOME/media/music/%(channel)s - %(title)s.%(ext)s" --embed-thumbnail --embed-metadata --extractor-args "youtube:player-client=default,-tv_simply" --cookies-from-browser chromium'
 alias calc='qalc'
 alias backup='rsync -avh --info=progress2 media personal school work notes /mnt/nas'
-alias fix_hyprlock="hyprctl --instance 0 'keyword misc:allow_session_lock_restore 1' && hyprctl --instance 0 'dispatch exec hyprlock'"
+alias fix_hyprlock="pkill hypridle && hyprctl --instance 0 'keyword misc:allow_session_lock_restore 1' && hyprctl --instance 0 'dispatch exec hyprlock'"
 alias lock="$HOME/.local/bin/hyprlock_idle"
 alias dir_to_avif="$HOME/.local/bin/dir_to_avif"
 alias dir_to_png="$HOME/.local/bin/dir_to_png"

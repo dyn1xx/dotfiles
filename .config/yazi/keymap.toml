@@ -29,3 +29,9 @@ run = 'cd "~/media/videos/"'
 [[mgr.prepend_keymap]]
 on  = ["g", "n"]
 run = 'cd "/mnt/nas"'
+
+[[mgr.prepend_keymap]]
+on   = "!"
+for  = "unix"
+run  = 'shell "$SHELL" --block'
+desc = "Open $SHELL here"
