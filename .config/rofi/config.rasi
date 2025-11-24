@@ -17,7 +17,7 @@ configuration {
 
 window {
     width: 480;
-    border-radius: 18px;
+    border-radius: 10px;
     border: 2px;
     border-color: @green;
     background-color: @bg;

@@ -31,7 +31,7 @@ label.module {
 tooltip {
     background: @bg;
     border: 2px solid @green;
-    border-radius: 18px;
+    border-radius: 10px;
 }
 
 tooltip label {
