@@ -3,3 +3,7 @@ require("relative-motions"):setup({
     show_motion = true,
     enter_mode ="first",
 })
+
+require("full-border"):setup {
+	type = ui.Border.ROUNDED,
+}
