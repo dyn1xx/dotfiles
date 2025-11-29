@@ -49,6 +49,13 @@ tooltip label {
     color: @green;
 }
 
+button:hover {
+    box-shadow: none;
+    text-shadow: none;
+    background: none;
+    transition: none;
+}
+
 #workspaces button.active {
     color: @bright-fg;
 }
