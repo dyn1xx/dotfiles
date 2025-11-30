@@ -3,6 +3,7 @@
 alias tree='tree -a -I .git'
 alias la='ls -la'
 alias ll='ls -1'
+alias mv='mv -v'
 alias v='nvim'
 alias upg='sudo pacman -Suy && yay -Suy'
 alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
