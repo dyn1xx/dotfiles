@@ -1,0 +1,21 @@
+/* Round corners of Firefox tabs */
+.tabbrowser-tab {
+    border-radius: 8px !important; /* Adjust the radius to your liking */
+    margin: 0px !important; /* Optional: Add spacing between tabs */
+}
+
+.tab-background {
+    border-radius: 8px !important; /* Match the radius to the tabs */
+    background-clip: padding-box !important; /* Prevents overlap issues */
+}
+
+/* Add padding to the left side of the tab bar */
+#tabbrowser-tabs {
+    padding-left: 2px !important; /* Adjust the padding value */
+}
+
+/* Hide the sidebar button (the one next to the URL bar) */
+#sidebar-button {
+    display: none !important;
+}
+
