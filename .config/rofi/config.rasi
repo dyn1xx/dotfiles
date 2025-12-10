@@ -11,7 +11,7 @@
 
 configuration {
     drun {
-        display-name: "";
+        display-name: "󰣇";
     }
 }
 
