@@ -1,12 +1,12 @@
 {
     "DesktopAudioDevice1": {
-        "prev_ver": 536870913,
+        "prev_ver": 536870914,
         "name": "Desktop Audio",
         "uuid": "a826318e-fb47-45d9-9ff1-14ae2f2b61d8",
         "id": "pulse_output_capture",
         "versioned_id": "pulse_output_capture",
         "settings": {
-            "device_id": "alsa_output.usb-Focusrite_Scarlett_Solo_USB-00.HiFi__Line1__sink.monitor"
+            "device_id": "GameSink.monitor"
         },
         "mixers": 193,
         "sync": 0,
@@ -30,8 +30,39 @@
         "monitoring_type": 0,
         "private_settings": {}
     },
+    "DesktopAudioDevice2": {
+        "prev_ver": 536870914,
+        "name": "Desktop Audio 2",
+        "uuid": "44c58d3e-bf4b-4a31-ae51-43aafb192782",
+        "id": "pulse_output_capture",
+        "versioned_id": "pulse_output_capture",
+        "settings": {
+            "device_id": "alsa_output.usb-Focusrite_Scarlett_Solo_USB-00.HiFi__Line1__sink.monitor"
+        },
+        "mixers": 194,
+        "sync": 0,
+        "flags": 0,
+        "volume": 1.0,
+        "balance": 0.5,
+        "enabled": true,
+        "muted": false,
+        "push-to-mute": false,
+        "push-to-mute-delay": 0,
+        "push-to-talk": false,
+        "push-to-talk-delay": 0,
+        "hotkeys": {
+            "libobs.mute": [],
+            "libobs.unmute": [],
+            "libobs.push-to-mute": [],
+            "libobs.push-to-talk": []
+        },
+        "deinterlace_mode": 0,
+        "deinterlace_field_order": 0,
+        "monitoring_type": 0,
+        "private_settings": {}
+    },
     "AuxAudioDevice1": {
-        "prev_ver": 536870913,
+        "prev_ver": 536870914,
         "name": "Mic/Aux",
         "uuid": "606eae67-1c54-4ad9-b23c-8ffe648d4dd5",
         "id": "pulse_input_capture",
@@ -39,7 +70,7 @@
         "settings": {
             "device_id": "alsa_input.usb-Focusrite_Scarlett_Solo_USB-00.HiFi__Mic1__source"
         },
-        "mixers": 194,
+        "mixers": 196,
         "sync": 0,
         "flags": 0,
         "volume": 1.350000023841858,
@@ -62,7 +93,7 @@
         "private_settings": {}
     },
     "AuxAudioDevice2": {
-        "prev_ver": 536870913,
+        "prev_ver": 536870914,
         "name": "Mic/Aux 2",
         "uuid": "25cd69fd-0e9d-45b8-ac83-a1af11baf7bf",
         "id": "pulse_input_capture",
@@ -70,7 +101,7 @@
         "settings": {
             "device_id": "alsa_input.usb-BLUE_MICROPHONE_Blue_Snowball_AYM_2018_07_28_33680-00.mono-fallback"
         },
-        "mixers": 196,
+        "mixers": 200,
         "sync": 0,
         "flags": 0,
         "volume": 1.0,
@@ -102,7 +133,7 @@
     "name": "Untitled",
     "sources": [
         {
-            "prev_ver": 536870913,
+            "prev_ver": 536870914,
             "name": "Scene",
             "uuid": "b576f3ca-1734-478d-98e8-73a36d5fe51b",
             "id": "scene",
@@ -191,13 +222,13 @@
             "private_settings": {}
         },
         {
-            "prev_ver": 536870913,
+            "prev_ver": 536870914,
             "name": "Screen Capture (PipeWire)",
             "uuid": "d843b8c8-9d96-4e90-b03c-8de4783a2130",
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": "c91770af-9e0e-442c-b48d-e385f578a28d"
+                "RestoreToken": "99c4dc1d-6a6d-47ac-b4c3-4662cb5e18ef"
             },
             "mixers": 0,
             "sync": 0,
@@ -271,4 +302,3 @@
     },
     "version": 2
 }
-
