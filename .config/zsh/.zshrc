@@ -46,9 +46,6 @@ export STARSHIP_CONFIG="$XDG_CONFIG_HOME/starship.toml"
 # Start tmux if not already in tmux
 [ -n "$TMUX" ] || exec tmux new-session -A -s main
 
-# Fix kitty ssh
-# [ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
-
 z() {
     zathura "$@" &
 }
