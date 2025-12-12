@@ -6,8 +6,8 @@ fi
 
 # Default apps
 export EDITOR=/usr/bin/nvim
-export TERMINAL=/usr/bin/kitty
-export BROWSER=/usr/bin/librewolf
+export TERMINAL=/usr/bin/foot
+export BROWSER=/usr/bin/firefox
 
 # Adds ~/.local/bin and subfolders to $PATH
 export PATH="$PATH:/home/v/.local/share/go/bin:${$(find ~/.local/bin -maxdepth 1 -type d -printf %p:)%%:}"
