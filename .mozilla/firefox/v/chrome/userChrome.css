@@ -19,3 +19,7 @@
     display: none !important;
 }
 
+/* Fix inconsistant padding on the left side of the nav-bar */
+#nav-bar-customization-target {
+  padding-inline: 4px;
+}
