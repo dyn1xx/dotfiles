@@ -37,7 +37,7 @@
         "id": "pulse_output_capture",
         "versioned_id": "pulse_output_capture",
         "settings": {
-            "device_id": "alsa_output.usb-Focusrite_Scarlett_Solo_USB-00.HiFi__Line1__sink.monitor"
+            "device_id": "alsa_output.usb-Focusrite_Scarlett_Solo_USB-00.HiFi__Line__sink.monitor"
         },
         "mixers": 194,
         "sync": 0,
