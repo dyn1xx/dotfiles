@@ -11,6 +11,8 @@ export BROWSER=/usr/bin/firefox
 # Adds ~/.local/bin and subfolders to $PATH
 export PATH="$PATH:/home/v/.local/share/go/bin:${$(find ~/.local/bin -maxdepth 1 -type d -printf %p:)%%:}"
 export PATH="$PATH:/home/v/.cargo/bin"
+export PATH="$PATH:/var/lib/flatpak/exports/share"
+export PATH="$PATH:/home/v/.local/share/flatpak/exports/share"
 
 # Wayland
 export OZONE_PLATFORM=wayland
