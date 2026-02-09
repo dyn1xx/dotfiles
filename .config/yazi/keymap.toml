@@ -88,3 +88,7 @@ on = [ "9" ]
 run = "plugin relative-motions 9"
 desc = "Move in relative steps"
 
+[[mgr.prepend_keymap]]
+on = [ "b" ]
+run = 'shell -- dolphin . --new-window'
+desc = "Open Dolphin in current directory"
