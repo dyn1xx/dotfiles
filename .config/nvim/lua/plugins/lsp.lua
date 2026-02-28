@@ -52,6 +52,6 @@ return {
         config = function()
             require("blink.cmp").setup({})
         end,
-    }
+    },
 
 }
