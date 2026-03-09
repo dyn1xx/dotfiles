@@ -52,3 +52,5 @@ x-scheme-handler/prusaslicer=PrusaSlicerURLProtocol.desktop
 video/x-matroska=mpv.desktop
 x-scheme-handler/about=firefox.desktop
 x-scheme-handler/unknown=firefox.desktop
+x-scheme-handler/sgnl=signal.desktop
+x-scheme-handler/signalcaptcha=signal.desktop
