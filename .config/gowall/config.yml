@@ -1,0 +1,1 @@
+OutputFolder: "media/pictures/wallpapers" # default is "Pictures/gowall". Sets the gowall directory to `~/MyImages`. The folder will be created if it does not exist
