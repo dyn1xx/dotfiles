@@ -3,14 +3,17 @@ return {
     -- lsp package manager
     {
         "mason-org/mason.nvim",
+        version = "^2.0.0",
         config = function()
             require("mason").setup()
-        end
+        end,
     },
 
     -- bridges mason with lspconfig
     {
         "mason-org/mason-lspconfig.nvim",
+        version = "^2.0.0",
+        dependencies = { "mason-org/mason.nvim" },
         config = function()
             require("mason-lspconfig").setup {
                 ensure_installed = {
@@ -18,7 +21,7 @@ return {
                     "gopls",
                     "pylsp",
                     "ts_ls",
-                }
+                },
             }
         end,
     },
@@ -26,22 +29,24 @@ return {
     -- lspconfig
     {
         "neovim/nvim-lspconfig",
+        dependencies = { "mason-org/mason-lspconfig.nvim" },
         config = function()
-            local lspconfig = require("lspconfig")
+            -- Keymaps on LSP attach
+            vim.api.nvim_create_autocmd("LspAttach", {
+                callback = function(args)
+                    local opts = { buffer = args.buf }
+                    vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
+                    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
+                    vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, opts)
+                end,
+            })
 
-            vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
-            vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
-            vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, {})
+            -- Enable servers via the new 0.12 vim.lsp.enable() API
+            local servers = { "lua_ls", "gopls", "pylsp", "ts_ls" }
+            for _, server in ipairs(servers) do
+                vim.lsp.enable(server)
+            end
         end,
-    },
-
-    -- automatically set up language servers
-    {
-        "Massolari/lsp-auto-setup.nvim",
-        dependencies = { "neovim/nvim-lspconfig" },
-        config = function()
-            require"lsp-auto-setup".setup{}
-        end
     },
 
     -- autocomplete
@@ -53,5 +58,4 @@ return {
             require("blink.cmp").setup({})
         end,
     },
-
 }

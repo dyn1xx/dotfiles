@@ -35,3 +35,6 @@ end, { noremap = true, silent = true })
 vim.keymap.set({ "n", "v" }, "<leader>l", function()
     vim.cmd("Lazy")
 end, { noremap = true, silent = true })
+
+-- restart
+vim.keymap.set("n", "<leader>re", "<cmd>restart<cr>")
