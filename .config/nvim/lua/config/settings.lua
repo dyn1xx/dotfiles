@@ -11,6 +11,12 @@ vim.opt.expandtab = true
 -- line wrap
 vim.opt.wrap = false
 
+-- splits
+vim.opt.smartindent = true
+vim.opt.inccommand = "split"
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+
 -- backups
 vim.opt.swapfile = false
 vim.opt.backup = false
@@ -20,6 +26,9 @@ vim.opt.undofile = true
 -- search
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.laststatus = 3
 
 -- scroll
 vim.opt.scrolloff = 8
@@ -69,3 +78,11 @@ vim.cmd([[
     hi! link StatusLine String
     hi! link StatusLineNC Comment
 ]])
+
+-- highlight yank
+vim.api.nvim_create_autocmd("TextYankPost", { 
+    desc = "Highlight when yanking text",
+    callback = function()
+        vim.hl.on_yank()
+    end,
+})

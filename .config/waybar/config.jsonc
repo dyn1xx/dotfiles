@@ -33,7 +33,6 @@
     "hyprland/workspaces": {
         "disable-scroll": false,
         "all-outputs": true,
-        "on-click": "activate",
         "format": "{icon}",
         "format-icons": {
             "empty": "",
