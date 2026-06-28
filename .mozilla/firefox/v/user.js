@@ -35,11 +35,11 @@ user_pref("privacy.sanitize.sanitizeOnShutdown", false);
 user_pref("privacy.clearOnShutdown.history", false);
 
 // Homepage
-user_pref("browser.startup.homepage", "http://192.168.1.4:3000");
+user_pref("browser.startup.homepage", "http://glance.local");
 
 // New windows + new tabs use homepage
 user_pref("browser.newtabpage.enabled", false);
-user_pref("browser.newtab.url", "http://192.168.1.4:3000");
+user_pref("browser.newtab.url", "http://glance.local");
 user_pref("browser.newtabpage.pinned", "[]");
 user_pref("browser.newtabpage.activity-stream.enabled", false);
 
