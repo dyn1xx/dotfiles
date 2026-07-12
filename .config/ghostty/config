@@ -1,0 +1,53 @@
+# --- Colors ---
+background = 14161b
+foreground = E0E2EA
+selection-foreground = E0E2EA
+selection-background = 4f5258
+cursor-color = E0E2EA
+cursor-text = 14161b
+
+# Normal colors
+palette = 0=#2c2e33
+palette = 1=#E5ADB9
+palette = 2=#A2DFC0
+palette = 3=#E3CA85
+palette = 4=#95C5E5
+palette = 5=#E5B6E6
+palette = 6=#7EDFDE
+palette = 7=#C4C6CD
+
+# Bright colors
+palette = 8=#4f5258
+palette = 9=#FFC0B9
+palette = 10=#B4F6C0
+palette = 11=#FCE094
+palette = 12=#A6DBFF
+palette = 13=#FFCAFF
+palette = 14=#8CF8F7
+palette = 15=#9b9ea4
+
+# Indexed colors
+palette = 16=#7EDFDE
+palette = 17=#4f5258
+
+# --- Font ---
+font-family = hack
+font-family-bold = hack Bold
+font-family-italic = hack Italic
+font-family-bold-italic = hack Bold Italic
+font-size = 13
+
+# --- Cursor ---
+cursor-style = block
+cursor-style-blink = false
+
+# --- Window ---
+window-padding-x = 13
+window-padding-y = 20
+background-opacity = 1.0
+
+# --- Mouse ---
+mouse-hide-while-typing = true
+
+# --- Shaders ---
+custom-shader = shaders/cursor_sweep.glsl
