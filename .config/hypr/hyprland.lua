@@ -156,15 +156,6 @@ hl.window_rule({
     size = "1600 1300",
 })
 
--- Ghostty
-hl.window_rule({
-    name = "ghostty",
-    match = { class = "com.mitchellh.ghostty" },
-    workspace = "2 silent",
-    pseudo = true,
-    size = "1600 1300",
-})
-
 -- Steam
 hl.window_rule({
     name = "steam",
