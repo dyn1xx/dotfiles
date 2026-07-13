@@ -17,7 +17,7 @@ hl.on("hyprland.start", function()
 
     -- Open apps on specific workspaces
     hl.exec_cmd("[workspace 1 silent] keepassxc")
-    hl.exec_cmd("[workspace 2 silent] kitty")
+    hl.exec_cmd("[workspace 2 silent] ghostty")
     hl.exec_cmd("[workspace 3 silent] firefox")
 
     -- Set GTK theme
@@ -151,6 +151,15 @@ hl.window_rule({
 hl.window_rule({
     name = "kitty",
     match = { class = "kitty" },
+    workspace = "2 silent",
+    pseudo = true,
+    size = "1600 1300",
+})
+
+-- Ghostty
+hl.window_rule({
+    name = "ghostty",
+    match = { class = "com.mitchellh.ghostty" },
     workspace = "2 silent",
     pseudo = true,
     size = "1600 1300",
