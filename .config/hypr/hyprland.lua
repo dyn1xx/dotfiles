@@ -17,7 +17,7 @@ hl.on("hyprland.start", function()
 
     -- Open apps on specific workspaces
     hl.exec_cmd("[workspace 1 silent] keepassxc")
-    hl.exec_cmd("[workspace 2 silent] ghostty")
+    hl.exec_cmd("[workspace 2 silent] kitty")
     hl.exec_cmd("[workspace 3 silent] firefox")
 
     -- Set GTK theme
