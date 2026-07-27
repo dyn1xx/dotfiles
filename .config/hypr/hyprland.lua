@@ -179,6 +179,13 @@ hl.window_rule({
     workspace = "6 silent",
 })
 
+-- ZapZap
+hl.window_rule({
+    name = "zapzap",
+    match = { class = "com.rtosta.zapzap" },
+    workspace = "6 silent",
+})
+
 -- Discord
 hl.window_rule({
     name = "discord",
