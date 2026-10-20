@@ -11,7 +11,7 @@
 
 /* Add padding to the left side of the tab bar */
 #tabbrowser-tabs {
-    padding-left: 2px !important; /* Adjust the padding value */
+    padding-left: 3px !important; /* Adjust the padding value */
 }
 
 /* Hide the sidebar button (the one next to the URL bar) */
