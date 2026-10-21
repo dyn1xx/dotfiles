@@ -5,7 +5,7 @@ fi
 
 # Default apps
 export EDITOR=/usr/bin/nvim
-export TERMINAL=/usr/bin/foot
+export TERMINAL=/usr/bin/kitty
 export BROWSER=/usr/bin/firefox
 
 # Adds ~/.local/bin and subfolders to $PATH
