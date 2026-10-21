@@ -33,7 +33,6 @@ plug "zsh-users/zsh-syntax-highlighting"
 plug "wintermi/zsh-starship"
 plug "zap-zsh/vim"
 plug "Aloxaf/fzf-tab"
-plug "marlonrichert/zsh-autocomplete"
 
 plug "$XDG_CONFIG_HOME/zsh/colored-man-pages.plugin.zsh"
 
